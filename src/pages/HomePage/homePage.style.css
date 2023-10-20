@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter+Tight:wght@300&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   /* background-color: black; */
 }
 
-:root {
-  --azul: #0f232d
+:root{
+  --azul: #253943;
+  --bege: #FFF5D6;
+  --verde: #638280;
+  --verde-claro:#96B7B5;
+  --laranja: #B38B6D;
 }
 
 h1 {
+  font-family: 'Abril Fatface', serif;
   font-size: 2.5rem;
 }
 
