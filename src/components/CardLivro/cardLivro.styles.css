@@ -1,0 +1,43 @@
+.card-livro {
+    border: 1px solid black; /* alterar p azul */
+    width: fit-content;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  .imagem-livro {
+    max-width: 250px;
+  }
+  
+  .container-detalhes-livro {
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .nome-autor {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+  
+  .preco {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: black /* alterar cor */  
+  }
+  
+  .botao-compra{
+      background-color: blue;
+      display: inline-block;
+      width: 100%;
+      padding: 1rem, 0;
+      text-align: center;
+      color: white;
+      font-family: monospace;
+      text-decoration: none;
+      margin-top: 2rem;
+  }
+  
+  .botao-compra:hover{
+      background-color: black;
+      transition: 0.2s ease-in
+  }
