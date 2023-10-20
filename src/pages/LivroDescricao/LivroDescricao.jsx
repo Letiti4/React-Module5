@@ -2,7 +2,7 @@ import React from 'react'
 
 const LivroDescricao = () => {
   return (
-    <div></div>
+    <div>LIVRO DESCRIÇÃO</div>
   )
 }
 
