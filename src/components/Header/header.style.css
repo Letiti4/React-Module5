@@ -1,4 +1,5 @@
 .headerContainer {
+    background-color: rgba(136, 136, 136, 0.466);
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -7,6 +8,18 @@
     top: 0;
     padding: 1.3rem;
 }
+
+/* .container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textPrimary {
+    color: var(--azul)
+} */
 
 .logo {
     font-size: 1.8rem;
