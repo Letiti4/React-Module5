@@ -1,4 +1,4 @@
-.footerCaixa {
+/* .footerCaixa {
     background-color: #0f232d;
     padding: 5rem 0;
 }
@@ -49,40 +49,43 @@
 .formEnviar:hover {
     background-color: #87c4ec;
     color: #333;
-}
+} */
 
 /*  */
 
-/* .footerCaixa{
-    background-color: #0f232d;   
+.footerCaixa {
+    background-color: #0f232d;
     width: 100%;
     height: 315px;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 5px;
 }
 
-.footerCaixa h2 {   
+.footerCaixa h2 {
     color: #ffffff;
     margin: 1rem;
-}   
+}
 
-.footerCaixa p{
+.footerCaixa p {
     color: #ffffff;
     display: flex;
     justify-content: center;
 }
 
-.formFooter{
+.formFooter {
     gap: 20px;
     margin-left: 20px;
 }
 
 
-.formLabel{
+.formLabel {
     color: #ffffff;
 }
 
-.formInput{
+.formInput {
     width: 30%;
-    height: 30px;
+    height: 40px;
     margin: 5px;
     border-radius: 5px;
     display: flex;
@@ -102,7 +105,4 @@
 .formEnviar:hover {
     background-color: #87c4ec;
     color: #333;
-} */
-
-
-
+}

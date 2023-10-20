@@ -1,8 +1,8 @@
-import React from 'react'
+// import React from 'react'
 import './Footer.styles.css'
 
 const Footer = () => {
-    function msgBotao(){
+    function msgBotao() {
         alert("Mensagem enviada com sucesso!")
     }
     return (
@@ -12,7 +12,7 @@ const Footer = () => {
                 <form className="formFooter">
                     <div className="formGroup">
                         <label htmlFor="nome" className="formLabel">Nome:</label>
-                        <input type="text" id="nome" className="formInput"/>
+                        <input type="text" id="nome" className="formInput" />
                     </div>
                     <div className="formGroup">
                         <label htmlFor="email" className="formLabel">Email:</label>
