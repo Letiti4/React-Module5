@@ -1,6 +1,6 @@
 import React from "react";
-import Style from './cardLivro.styles.css'
-import CapaLivro from '../../images/livro-capa-teste.png'
+import '../CardLivro/cardLivro.styles.css'
+import CapaLivro from '../../assets/livro-capa-teste.jpg'
 
 const CardLivro = () => {
     return (
