@@ -1,11 +1,17 @@
-import React from 'react'
+// import React from 'react'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import Layout from '../../components/Layout/Layout'
+import '../HomePage/homePage.style.css'
 
 const HomePage = () => {
-  return (
-      <section>
-
-      </section>
-  )
+    return (
+        <section>
+            <Header />
+            <Layout />
+            <Footer />
+        </section>
+    )
 }
 
 export default HomePage
