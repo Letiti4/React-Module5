@@ -1,63 +1,7 @@
-/* .footerCaixa {
-    background-color: #0f232d;
-    padding: 5rem 0;
-}
-
-.footerCaixa h2 {
-    color: #ffffff;
-}
-
-.footerCaixa p {
-    color: #ffffff;
-    padding-top: 2rem;
-    font-size: 0.8rem;
-}
-
-.formFooter {
-    padding-top: 3rem;
-    width: 50%;
-}
-
-.formGroup {
-    padding: 1rem 0;
-}
-
-.formLabel {
-    display: inline-block;
-    color: #ffffff;
-    padding-bottom: 10px;
-}
-
-.formInput {
-    width: 100%;
-    padding: 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    outline: none;
-}
-
-.formEnviar {
-    display: inline-block;
-    color: #0d0d0d;
-    text-decoration: none;
-    background-color: #e6e9f0;
-    padding: 0.8rem 2rem;
-    transition: 0.3s ease-in;
-    border: none;
-}
-
-.formEnviar:hover {
-    background-color: #87c4ec;
-    color: #333;
-} */
-
-/*  */
-
 .footerCaixa {
     background-color: #0f232d;
     width: 100%;
     height: 315px;
-    position: fixed;
     bottom: 0;
     padding-bottom: 5px;
 }
