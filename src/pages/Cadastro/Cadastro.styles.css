@@ -1,34 +1,34 @@
-.containerCadastro{
+.containerCadastro {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.imagemCadastro{
+.imagemCadastro {
     width: 45%;
     overflow: hidden;
 }
 
-.imagemCadastro img{
+.imagemCadastro img {
     width: 100%;
-    height: 100vh;
+    height: 99.9vh;
     object-fit: cover;
 }
 
-.containerConteudo{
+.containerConteudo {
     width: 50%;
 }
 
-.containerGeral{
-    width:90%;
+.containerGeral {
+    width: 90%;
     margin: auto;
 }
 
-.containerForm{
+.containerForm {
     padding-right: 3rem;
 }
 
-.containerForm h2{
+.containerForm h2 {
     padding-bottom: 1rem;
     font-size: 2rem;
 }
