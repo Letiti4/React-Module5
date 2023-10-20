@@ -1,12 +1,11 @@
 .headerContainer {
-    background-color: rgba(136, 136, 136, 0.466);
+    background-color: #0f232d;
     position: absolute;
     display: flex;
     justify-content: space-between;
-    color: blue;
     width: 100%;
     top: 0;
-    padding: 1.3rem;
+    padding: 0.5rem;
 }
 
 /* .container {
@@ -22,21 +21,20 @@
 } */
 
 .logo {
-    font-size: 1.8rem;
-    color: blue;
-    text-decoration: none;
-    font-weight: 600;
+    /* width: 30%;
+    height: 50px; */
 }
 
 .navLinks {
-    color: blue;
+    color: #FFF5D6;
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 500;
     padding-left: 20px;
     transition: 0.2s ease-in;
+    font-family: 'Abril Fatface', serif;
 }
 
 .navLinks:hover {
-    color: var(--primary-color);
+    color: #96B7B5;
 }
