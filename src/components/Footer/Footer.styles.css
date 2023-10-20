@@ -43,9 +43,66 @@
     background-color: #e6e9f0;
     padding: 0.8rem 2rem;
     transition: 0.3s ease-in;
+    border: none;
 }
 
 .formEnviar:hover {
     background-color: #87c4ec;
     color: #333;
 }
+
+/*  */
+
+/* .footerCaixa{
+    background-color: #0f232d;   
+    width: 100%;
+    height: 315px;
+}
+
+.footerCaixa h2 {   
+    color: #ffffff;
+    margin: 1rem;
+}   
+
+.footerCaixa p{
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.formFooter{
+    gap: 20px;
+    margin-left: 20px;
+}
+
+
+.formLabel{
+    color: #ffffff;
+}
+
+.formInput{
+    width: 30%;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formEnviar {
+    margin-top: 10px;
+    color: #0d0d0d;
+    text-decoration: none;
+    background-color: #e6e9f0;
+    width: 10%;
+    height: 30px;
+    transition: 0.3s ease-in;
+}
+
+.formEnviar:hover {
+    background-color: #87c4ec;
+    color: #333;
+} */
+
+
+

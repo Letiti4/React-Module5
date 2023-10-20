@@ -2,6 +2,9 @@ import React from 'react'
 import './Footer.styles.css'
 
 const Footer = () => {
+    function msgBotao(){
+        alert("Mensagem enviada com sucesso!")
+    }
     return (
         <section className="footerCaixa">
             <div className="caixa">
@@ -9,18 +12,18 @@ const Footer = () => {
                 <form className="formFooter">
                     <div className="formGroup">
                         <label htmlFor="nome" className="formLabel">Nome:</label>
-                        <input type="text" id="nome" className="formInput" placeholder="Digite seu nome" />
+                        <input type="text" id="nome" className="formInput"/>
                     </div>
                     <div className="formGroup">
                         <label htmlFor="email" className="formLabel">Email:</label>
-                        <input type="email" id="email" className="formInput" placeholder="Digite seu email" />
+                        <input type="email" id="email" className="formInput" />
                     </div>
                     <div className="formGroup">
                         <label htmlFor="mensagem" className="formLabel">Mensagem:</label>
-                        <textarea className="formInpu   t" id="mensagem" placeholder="Digite sua mensagem"></textarea>
+                        <textarea className="formInput" id="mensagem" ></textarea>
                     </div>
                     <div className="formGroup">
-                        <a href="a" className="formEnviar">Enviar</a>
+                        <button className="formEnviar" onClick={msgBotao} >Enviar</button>
                     </div>
                 </form>
 
