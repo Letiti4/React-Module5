@@ -1,14 +1,10 @@
-import { useState } from 'react'
 import './App.css'
-import ReactDOM from 'react-dom/client'
+
+import Header from './components/Header/Header'
 
 function App() {
 
-
   return (
     <>
-    </>
-  )
-}
-
+      <Header />
 export default App
