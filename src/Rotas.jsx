@@ -3,12 +3,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage"
 import Livros from "./pages/Livros/Livros";
 import LivroDescricao from "./pages/LivroDescricao/LivroDescricao";
+import Cadastro from "./pages/Cadastro/Cadastro";
+import Login from "./pages/Login/Login";
 
 const Rotas = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/livros" element={<Livros />} />
                 <Route path="/livro-descricao/:id" element={<LivroDescricao />} />
             </Routes>
