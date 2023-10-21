@@ -8,11 +8,12 @@
     align-items: center;
 }
 
-.layoutConteudo{
+.layoutConteudo {
     width: fit-content;
 }
 
-.layoutConteudo h1, .layoutConteudo p{
+.layoutConteudo h1,
+.layoutConteudo p {
     color: #fff;
     text-align: center;
     padding-bottom: 10px;

@@ -1,0 +1,17 @@
+.boxPesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisa {
+    margin-left: 20px;
+    width: 900px;
+    height: 55px;
+    border: none;
+    border-radius: 7px;
+    border: 1px solid black;
+    padding: 8px;
+    font-size: 25px;
+    /* color: #FFF; */
+}

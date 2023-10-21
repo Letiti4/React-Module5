@@ -2,7 +2,13 @@ import React from 'react'
 import './Cadastro.styles.css'
 import livrosLc from "../../assets/livrosLc.jpg"
 import Header from '../../components/Header/Header'
+import { useNavigate } from 'react-router-dom'
+
 const Cadastro = () => {
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/login')
+    }
     return (
         <>
             <Header />
@@ -14,22 +20,21 @@ const Cadastro = () => {
                     <div className="containerGeral">
                         <div className="containerForm">
                             <h2>Cadastre-se</h2>
-                            <p>Crie uma conta!</p>
                             <form>
                                 <div className="formGroup">
-                                    <label htmlFor="">Usuário</label>
-                                    <input type="usuario" className="formInput" />
+                                    <label htmlFor="">Usuário:</label>
+                                    <input type="usuario" />
                                 </div>
                                 <div className="formGroup">
-                                    <label htmlFor="">Email</label>
-                                    <input type="email" className="formInput" />
+                                    <label htmlFor="">Email:</label>
+                                    <input type="email" />
                                 </div>
                                 <div className="formGroup">
-                                    <label htmlFor="">Senha</label>
-                                    <input type="senha" className="formInput" />
+                                    <label htmlFor="">Senha:</label>
+                                    <input type="senha" />
                                 </div>
                                 <div className="formGroup">
-                                    <button className="formEnviar">Criar conta</button>
+                                    <button onClick={() => { handleClick }} className="formEnviar">Criar conta</button>
                                 </div>
                             </form>
                         </div>
