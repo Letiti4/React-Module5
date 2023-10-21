@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter+Tight:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter Tight', sans-serif;
+}
+
+:root {
+    --azul: #253943;
+    --bege: #FFF5D6;
+    --verde: #638280;
+    --verde-claro: #96B7B5;
+    --verde-escuro: #0f232d;
+    --laranja: #B38B6D;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 3.5rem;
+}
+
+h2 {
+    /* font-family: 'Abril Fatface', serif; */
+    font-size: 1.8rem;
+}
+
+label {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 25px;
+}
+
+input {
+    width: 450px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
