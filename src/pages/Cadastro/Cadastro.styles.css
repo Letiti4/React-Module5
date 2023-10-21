@@ -32,3 +32,10 @@
     padding-bottom: 1rem;
     font-size: 2rem;
 }
+
+.formEnviar {
+    height: 45px;
+    width: 200px;
+    border-radius: 8px;
+    font-size: 25px;
+}
