@@ -3,9 +3,14 @@
   margin-bottom: 5%;
 }
 
+.container-lista-produtos h2 {
+  padding: 25px;
+}
+
 .container-lista {
-  padding-top: 4rem;
+  padding-top: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
