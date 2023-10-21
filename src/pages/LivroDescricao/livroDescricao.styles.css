@@ -1,0 +1,12 @@
+.container-descricao{
+    padding-top: 5rem;
+}
+
+.container-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-imagem-livro, .container-descricao-livro{
+    width: 50%;
+}
