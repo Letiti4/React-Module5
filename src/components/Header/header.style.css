@@ -1,5 +1,5 @@
 .headerContainer {
-    background-color: #0f232d;
+    background-color: var(--verde-escuro);
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -8,7 +8,7 @@
     padding: 0.5rem;
 }
 
-/* .container {
+.container {
     width: 90%;
     margin: auto;
     display: flex;
@@ -16,17 +16,8 @@
     align-items: center;
 }
 
-.textPrimary {
-    color: var(--azul)
-} */
-
-.logo {
-    /* width: 30%;
-    height: 50px; */
-}
-
 .navLinks {
-    color: #FFF5D6;
+    color: var(--bege);
     text-decoration: none;
     font-size: 1.6rem;
     font-weight: 500;
@@ -36,5 +27,5 @@
 }
 
 .navLinks:hover {
-    color: #96B7B5;
+    color: var(--verde-claro);
 }
