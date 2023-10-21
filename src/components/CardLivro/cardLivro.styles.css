@@ -1,43 +1,59 @@
 .card-livro {
-    border: 1px solid black; /* alterar p azul */
-    width: fit-content;
+    border: 1px solid black;
+    /* alterar p azul */
+    width: 350px;
+    height: 530px;
     padding: 2rem;
     border-radius: 10px;
-  }
-  
-  .imagem-livro {
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+}
+
+.imagem-livro {
     max-width: 250px;
-  }
-  
-  .container-detalhes-livro {
-    padding-top: 2rem;
-    padding-left: 2rem;
-  }
-  
-  .nome-autor {
-    font-size: 0.8rem;
+}
+
+.container-detalhes-livro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.titulo-livro {
+    padding-top: 5px;
+    font-size: 30px;
+}
+
+.nome-autor {
+    font-size: 20px;
     padding: 0.5rem 0;
-  }
-  
-  .preco {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: black /* alterar cor */  
-  }
-  
-  .botao-compra{
-      background-color: blue;
-      display: inline-block;
-      width: 100%;
-      padding: 1rem, 0;
-      text-align: center;
-      color: white;
-      font-family: monospace;
-      text-decoration: none;
-      margin-top: 2rem;
-  }
-  
-  .botao-compra:hover{
-      background-color: black;
-      transition: 0.2s ease-in
-  }
+}
+
+.preco {
+    font-size: 30px;
+    font-weight: 700;
+    color: black
+        /* alterar cor */
+}
+
+.botao-compra {
+    background-color: blue;
+    display: inline-block;
+    width: 250px;
+    height: 40px;
+    /* padding: 1rem, 0; */
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.botao-compra:hover {
+    background-color: black;
+    transition: 0.2s ease-in
+}
