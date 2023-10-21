@@ -1,3 +1,4 @@
+import '../src/styleGlobal.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Rotas from './Rotas'
