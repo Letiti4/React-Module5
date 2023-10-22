@@ -1,6 +1,5 @@
 import '../Layout/layout.style.css'
 
-
 const Layout = () => {
     return (
         <section className="layoutContainer">
@@ -8,7 +7,6 @@ const Layout = () => {
                 <h1>Os melhores livros disponíveis</h1>
                 <p>Compre livros de qualidade com preços baixos</p>
             </div>
-
         </section>
     )
 }
