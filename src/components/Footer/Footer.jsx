@@ -7,9 +7,10 @@ const Footer = () => {
     }
     return (
         <section className="footerCaixa">
-            <h2>Entre em contato conosco</h2>
-            <div className="caixa">
+            
+                
                 <form className="formFooter">
+                    <h2>Entre em contato conosco!</h2>
                     <div className="formGroup">
                         <label htmlFor="nome" className="formLabel">Nome:</label>
                         <input type="text" id="nome" className="formInput" />
@@ -28,14 +29,15 @@ const Footer = () => {
                 </form>
                 <div className="footerInfo">
                     <ul>
-                        <li>Endereço: R. Marechal Deodoro, 100 - Curitiba</li>
-                        <li>Telefone: (41) 9 9999-9999</li>
-                        <li>CNPJ: 15.302.489/0001-01</li>
-                        <li>Todos os direitos reservados.</li>
+                        <li>R. Marechal Deodoro, 100 - Curitiba</li>
+                        <li>Telefone: (41) 9 9999-999  -  CNPJ: 15.302.489/0001-019</li>
                     </ul>
+                    <p>Todos os direitos reservados &copy; 2023 Espaço das Letras. </p>
                 </div>
-            </div>
-            <p>&copy; 2023 Espaço das Letras. </p>
+            
+
+            {/* COLOCAR BICICLETONA E REDES SOCIAIS */}
+            
         </section>
     )
 }
