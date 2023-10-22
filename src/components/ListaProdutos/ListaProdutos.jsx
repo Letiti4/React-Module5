@@ -1,39 +1,28 @@
-import React from "react";
 import '../ListaProdutos/listaProdutos.styles.css'
+import { livros } from "../Livros/Livros";
+import { useState } from 'react';
 import CardLivro from "../CardLivro/CardLivro";
-import BarraPesquisa from "../BarraPesquisa/BarraPesquisa";
 
 const ListaProdutos = () => {
 
-    // const [pesquisa, setPesquisa] = useState("") 
+    const [pesquisa, setPesquisa] = useState("")
 
     return (
-        <>
-            <div className="container-lista-produtos">
-                <div>
-                    <h2>Alguns títulos que podem te interessar: </h2>
-                    <BarraPesquisa />
+        <div className="container-lista-produtos">
+            <div>
+                <h2>Alguns títulos que podem te interessar: </h2>
 
-                    <div className="container-lista">
-                        <CardLivro titulo={'Alice no país das maravilhas'} autor={'Dona MAria'} preco={'R$39,90'} />
-                        <CardLivro titulo={'Titanic'} autor={'Thiago Souza'} preco={'R$59,90'} />
-                        <CardLivro titulo={'Pinóquio'} autor={'George Marlon'} preco={'R$55,90'} />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                        <CardLivro />
-                    </div>
+                <div className='boxPesquisa'>
+                    <input className='pesquisa' value={pesquisa} onChange={(e) => setPesquisa(e.target.value)} placeholder='Pesquise um livro'></input>
+                    <button className=''>Pesquisar</button>
+                </div>
+
+                <div className="container-lista">
+                    {livros.filter((livro) => livro.titulo.toLowerCase().includes(pesquisa.toLowerCase())).map(livro => <CardLivro key={livros.id} titulo={livros.titulo} autor={livros.autor} preco={livros.preco} />
+                    )}
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
