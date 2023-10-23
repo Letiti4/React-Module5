@@ -1,8 +1,9 @@
 .card-livro {
     border: 1px solid black;
     /* alterar p azul */
+    box-shadow: 10px 10px 5px black;
     width: fit-content;
-    padding: 2rem;
+    padding: 24px;
     border-radius: 10px;
 }
 
