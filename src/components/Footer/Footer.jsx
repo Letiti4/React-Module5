@@ -14,9 +14,9 @@ const Footer = () => {
     return (
         <section className="footerCaixa">
             <div className="infos-site">
-                
+
                 <form className="formFooter">
-                    
+
                     <h2>Entre em contato conosco!</h2>
                     <div className="formGroup">
                         <label htmlFor="nome" className="formLabel">
@@ -43,37 +43,41 @@ const Footer = () => {
                     </div>
                 </form>
 
-                <div className="bike-e-redes" >
+                <div>
                     <div className='bicicleta'>
-                        <img  className='bike' src={bike} alt="bicicleta" />
+                        <img className='bike' src={bike} alt="bicicleta" />
                     </div>
+                    
                     <div className="redes-sociais">
-                        <a href="" target="_blank">
-                            <img
-                                src={instagram}
-                                alt="icone do instagram"
-                            />
+                        <a href="#" target="_blank">
+                            <img src={instagram} alt="icone do instagram" />
                         </a>
-                        <a href="" target="_blank">
+                        <a href="#" target="_blank">
                             <img src={facebook} alt="icone do facebook" />
                         </a>
-                        <a href="" target="_blank">
+                        <a href="#" target="_blank">
                             <img src={whatsapp} alt="icone do whatsapp" />
                         </a>
-                        
                     </div>
+                    
+                    {/* <div className="menu-footer">
+                            <nav>
+                                <a href="index.html">Home</a>
+                                <a href="contato.html">Livros</a>
+                                <a href="contato.html">Login</a>
+                            </nav>
+                        </div> */}
                 </div>
             </div>
-            
-            <div className="footerInfo">
+
+            <footer className="footerInfo">
                 <ul>
                     <li>R. Marechal Deodoro, 100 - Curitiba</li>
                     <li>Telefone: (41) 9 9999-999 - CNPJ: 15.302.489/0001-019</li>
                 </ul>
                 <p>Todos os direitos reservados &copy; 2023 Espaço das Letras. </p>
-            </div>
+            </footer>
 
-            {/* COLOCAR BICICLETONA E REDES SOCIAIS */}
         </section>
     );
 };
