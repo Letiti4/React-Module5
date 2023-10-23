@@ -93,3 +93,21 @@
     background-color: #87c4ec;
     color: #333;
 }
+
+.redes-sociais img{
+    max-width: 75px;
+}
+
+.redes-sociais{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.redes-sociais, .formFooter{
+    max-width: 50%;
+}
+
+.infos-site{
+    display: flex;
+}
