@@ -72,7 +72,6 @@
     color: #ffffff;
     font-size:15px;
     display: flex;
-    
     justify-content: center;
     padding: 0.2rem
 }
@@ -94,13 +93,8 @@
     color: #333;
 }
 
-.bike{
-    max-width: 50%;
-}
-.bike-e-redes{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ .bike{
+    max-width: 60%;
 }
 
 .redes-sociais img{
@@ -119,4 +113,6 @@
 
 .infos-site{
     display: flex;
+    justify-content: center;
+    gap: 6rem
 }
