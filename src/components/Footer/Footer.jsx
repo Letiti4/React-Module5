@@ -1,11 +1,10 @@
-// import React from 'react'
 import "./Footer.styles.css";
 import facebook from "../../assets/Logos/facebook.png";
 import email from "../../assets/Logos/email.png";
 import instagram from "../../assets/Logos/insta.png";
 import whatsapp from "../../assets/Logos/whatsapp.png";
 import bike from "../../assets/Logos/bike.png";
-
+import './Footer.styles.css'
 
 const Footer = () => {
     function msgBotao() {

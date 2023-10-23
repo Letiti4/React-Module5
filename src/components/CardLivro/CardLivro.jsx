@@ -1,4 +1,3 @@
-import React from "react";
 import '../CardLivro/cardLivro.styles.css'
 import CapaLivro from '../../assets/livro-capa-teste.jpg'
 
