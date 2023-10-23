@@ -2,6 +2,7 @@
 import { useNavigate } from "react-router-dom"
 import livrosLc from "../../assets/livrosLc.jpg"
 import Header from "../../components/Header/Header"
+import Footer from "../../components/Footer/Footer"
 
 const Login = () => {
     const navigate = useNavigate()
@@ -36,6 +37,7 @@ const Login = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </>
     )
 }

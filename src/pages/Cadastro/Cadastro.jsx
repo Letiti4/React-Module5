@@ -3,6 +3,7 @@ import './Cadastro.styles.css'
 import livrosLc from "../../assets/livrosLc.jpg"
 import Header from '../../components/Header/Header'
 import { useNavigate } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 
 const Cadastro = () => {
     const navigate = useNavigate()
@@ -41,6 +42,7 @@ const Cadastro = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </>
     )
 }
