@@ -8,9 +8,9 @@
     justify-content: space-between;
 }
 
-.container-imagem-livro, .container-descricao-livro{
+/* .container-imagem-livro, .container-descricao-livro{
     width: 50%;
-}
+} */
 
 .container-imagem-livro{
     display: flex;
