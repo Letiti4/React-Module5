@@ -9,10 +9,7 @@
 .footerCaixa h2 {
     color: #ffffff;
     padding: 15px;
-    /* margin-left: 180px; */
     text-align: center;
-
-    /* margin: 1rem; */
 }
 
 .footerCaixa p {
@@ -29,7 +26,6 @@
 .formFooter {
     gap: 20px;
     margin-left: 200px;
-
 }
 
 
@@ -65,16 +61,19 @@
 .footerInfo {
     /* margin-top: 35px; */
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 1.5rem;
 }
 
 .footerInfo li {
     list-style: none;
-    margin-right: 200px;
     color: #ffffff;
-    margin-top: 20px;
-    font-size: 25px;
-    text-align: center;
+    font-size:15px;
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem
 }
 
 .formEnviar {
@@ -93,3 +92,44 @@
     background-color: #87c4ec;
     color: #333;
 }
+
+.infos-site{
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    background-color: #638280;
+    padding: 1rem;
+}
+
+
+/* div com a bicicleta e redes */
+.bike{
+    max-width: 60%;
+}
+
+.redes-sociais img{
+    max-width: 75px;
+}
+
+.redes-sociais{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.redes-sociais, .formFooter{
+    max-width: 50%;
+}
+
+
+
+
+/* .menu-footer{
+    gap:1rem;
+    font-size: 1.5rem;
+    
+}
+
+.menu-footer > a{
+    text-decoration: none;
+} */

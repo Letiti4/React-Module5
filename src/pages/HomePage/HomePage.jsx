@@ -10,6 +10,7 @@ const HomePage = () => {
         <section>
             <Header />
             <Layout />
+//             <ListaProdutos />
             <Footer />
         </section>
     )

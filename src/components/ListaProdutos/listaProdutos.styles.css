@@ -1,16 +1,14 @@
 .container-lista-produtos {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 5%;
 }
 
-.container-lista-produtos h2 {
-  padding: 25px;
+.container-lista-produtos h2{
+  font-family: 'Abril Fatface', serif;
 }
 
 .container-lista {
-  padding-top: 1rem;
+  padding-top: 4rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
-  flex-wrap: wrap;
 }
