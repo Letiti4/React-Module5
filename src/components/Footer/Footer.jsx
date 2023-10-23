@@ -55,11 +55,12 @@ const Footer = () => {
                             />
                         </a>
                         <a href="" target="_blank">
-                            <img src={whatsapp} alt="icone do whatsapp" />
-                        </a>
-                        <a href="" target="_blank">
                             <img src={facebook} alt="icone do facebook" />
                         </a>
+                        <a href="" target="_blank">
+                            <img src={whatsapp} alt="icone do whatsapp" />
+                        </a>
+                        
                     </div>
                 </div>
             </div>
