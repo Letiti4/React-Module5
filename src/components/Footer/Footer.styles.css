@@ -26,7 +26,6 @@
 .formFooter {
     gap: 20px;
     margin-left: 200px;
-
 }
 
 
@@ -93,6 +92,15 @@
 .formEnviar:hover {
     background-color: #87c4ec;
     color: #333;
+}
+
+.bike{
+    max-width: 50%;
+}
+.bike-e-redes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .redes-sociais img{

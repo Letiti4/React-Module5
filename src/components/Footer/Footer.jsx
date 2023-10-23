@@ -4,6 +4,8 @@ import facebook from "../../assets/Logos/facebook.png";
 import email from "../../assets/Logos/email.png";
 import instagram from "../../assets/Logos/insta.png";
 import whatsapp from "../../assets/Logos/whatsapp.png";
+import bike from "../../assets/Logos/bike.png";
+
 
 const Footer = () => {
     function msgBotao() {
@@ -12,7 +14,9 @@ const Footer = () => {
     return (
         <section className="footerCaixa">
             <div className="infos-site">
+                
                 <form className="formFooter">
+                    
                     <h2>Entre em contato conosco!</h2>
                     <div className="formGroup">
                         <label htmlFor="nome" className="formLabel">
@@ -38,21 +42,28 @@ const Footer = () => {
                         </button>
                     </div>
                 </form>
-                <div className="redes-sociais">
-                    <a href="" target="_blank">
-                        <img
-                            src={instagram}
-                            alt="icone do instagram"
-                        />
-                    </a>
-                    <a href="" target="_blank">
-                        <img src={whatsapp} alt="icone do whatsapp" />
-                    </a>
-                    <a href="" target="_blank">
-                        <img src={facebook} alt="icone do facebook" />
-                    </a>
+
+                <div className="bike-e-redes" >
+                    <div className='bicicleta'>
+                        <img  className='bike' src={bike} alt="bicicleta" />
+                    </div>
+                    <div className="redes-sociais">
+                        <a href="" target="_blank">
+                            <img
+                                src={instagram}
+                                alt="icone do instagram"
+                            />
+                        </a>
+                        <a href="" target="_blank">
+                            <img src={whatsapp} alt="icone do whatsapp" />
+                        </a>
+                        <a href="" target="_blank">
+                            <img src={facebook} alt="icone do facebook" />
+                        </a>
+                    </div>
                 </div>
             </div>
+            
             <div className="footerInfo">
                 <ul>
                     <li>R. Marechal Deodoro, 100 - Curitiba</li>
