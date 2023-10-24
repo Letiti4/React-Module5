@@ -1,0 +1,12 @@
+.botoes {
+    display: flex;
+    margin-top: 40px;
+}
+
+.botaoAtualizar {
+    margin-right: 25px;
+    height: 45px;
+    width: 300px;
+    border-radius: 8px;
+    font-size: 25px;
+}
