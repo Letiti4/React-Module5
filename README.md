@@ -6,7 +6,7 @@ Bem-vindos ao Espaço das Letras, o seu novo destino literário online. Nós som
 
 Esse projeto foi desenvolvido um site utilizando React com o objetivo de consumir os dados da API. 
 
-* [React Livraria espaço da cultura](https://github.com/Letiti4/React-Module5.git)
+* [React Livraria espaço das Letras](https://github.com/Letiti4/React-Module5.git)
 
 
 ##  Requisitos 
