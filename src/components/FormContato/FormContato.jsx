@@ -1,6 +1,5 @@
 import React from 'react'
 import facebook from "../../assets/Logos/facebook.png";
-import email from "../../assets/Logos/email.png";
 import instagram from "../../assets/Logos/insta.png";
 import whatsapp from "../../assets/Logos/whatsapp.png";
 import bike from "../../assets/Logos/bike.png";
@@ -29,7 +28,7 @@ const FormContato = () => {
                     <label htmlFor="mensagem" className="formLabel">
                         Mensagem:
                     </label>
-                    <textarea className="formText" id="mensagem"></textarea>
+                    <textarea className="formText" id="mensagem" rows={10}></textarea>
                 </div>
                 <div className="formGroup">
                     <button className="formEnviar" onClick={msgBotao}>
@@ -54,14 +53,6 @@ const FormContato = () => {
                         <img src={whatsapp} alt="icone do whatsapp" />
                     </a>
                 </div>
-
-                {/* <div className="menu-footer">
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="contato.html">Livros</a>
-                    <a href="contato.html">Login</a>
-                </nav>
-            </div> */}
             </div>
         </div>
     )
