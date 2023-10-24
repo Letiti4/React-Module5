@@ -1,15 +1,14 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 import livrosLc from "../../assets/livrosLc.jpg"
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import '../Perfil/perfil.style.css'
 
 const Perfil = () => {
-    const navigate = useNavigate()
-    const handleClick = () => {
-        navigate('/livros')
-    }
+    // const navigate = useNavigate()
+    // const handleClick = () => {
+    //     navigate('/livros')
+    // }
 
     return (
         <>
