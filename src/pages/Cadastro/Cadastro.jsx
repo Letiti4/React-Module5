@@ -42,37 +42,36 @@ const Cadastro = () => {
                 </div>
                 <div className="containerConteudo">
                     <div className="containerGeral">
-                        <div className="containerForm">
+                        <div className="tituloCadastro">
                             <h2>Cadastre-se</h2>
-                            <form>
-                                <div className="formGroup">
+                        </div>
+                        <form>
+                            <div class="geralInput">
+                                <div className="caixaInput">
                                     <label htmlFor="">Usuário:</label>
                                     <input type="usuario"
                                         value={nome}
-                                        onChange={(e) => setNome(e.target.value)} />
+                                        onChange={(e) => setNome(e.target.value)}  placeholder="Digite seu usuário"/>
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Email:</label>
                                     <input type="email"
                                         value={email}
-                                        onChange={(e) => setEmail(e.target.value)} />
+                                        onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu email"/>
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Senha:</label>
                                     <input type="senha" value={senha}
-                                        onChange={(e) => setSenha(e.target.value)} />
+                                        onChange={(e) => setSenha(e.target.value)} placeholder="Digite sua senha"/>
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Confirmação de Senha:</label>
                                     <input type="senha" value={confirmaSenha}
-                                        onChange={(e) => setConfirmaSenha(e.target.value)} />
+                                        onChange={(e) => setConfirmaSenha(e.target.value)} placeholder="Digite sua senha"/>
                                 </div>
-                                <div className="formGroup">
-                                    <button width="100%" onClick={handleCadastro}
-                                        className="formEnviar">Criar conta</button>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                                <button width="100%" onClick={handleCadastro} className="btnEnviar">Criar conta</button>
+                        </form>
                     </div>
                 </div>
             </section>
