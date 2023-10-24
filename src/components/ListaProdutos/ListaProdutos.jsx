@@ -1,5 +1,5 @@
 import '../ListaProdutos/listaProdutos.styles.css'
-import { livros } from "../Livros/Livros";
+import { livros } from "../../core/Livros";
 import { useState } from 'react';
 import CardLivro from "../CardLivro/CardLivro";
 
@@ -12,15 +12,18 @@ const ListaProdutos = () => {
             <div>
                 <h2>Alguns títulos que podem te interessar: </h2>
 
+                {/* SEPARAR EM COMPONENTE */}
                 <div className='boxPesquisa'>
                     <input className='pesquisa' value={pesquisa} onChange={(e) => setPesquisa(e.target.value)} placeholder='Pesquise um livro'></input>
-                    <button className=''>Pesquisar</button>
+                {/* <button className=''>Pesquisar</button> */}
                 </div>
 
                 <div className="container-lista">
-                    {livros.filter((livro) => livro.titulo.toLowerCase().includes(pesquisa.toLowerCase())).map(livro => <CardLivro key={livros.id} titulo={livros.titulo} autor={livros.autor} preco={livros.preco} />
+                    {livros.filter((livro) => livro.titulo.toLowerCase().includes(pesquisa.toLowerCase())).map(livro => 
+                    <CardLivro key={livro.id} titulo={livro.titulo} autor={livro.autor} preco={livro.preco} capa={livro.capa} />
                     )}
                 </div>
+
             </div>
         </div>
     )
