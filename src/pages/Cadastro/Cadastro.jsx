@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './Cadastro.styles.css'
-import livrosLc from "../../assets/livrosLc.jpg"
+import livrosLc from "../../assets/livrosLC.jpg"
 import Header from '../../components/Header/Header'
 import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
@@ -15,7 +15,7 @@ const Cadastro = () => {
     const navigate = useNavigate()
     const handleCadastro = async (e) => {
         e.preventDefault()
-        
+
         const body = {
             nome,
             email
@@ -27,7 +27,7 @@ const Cadastro = () => {
             localStorage.setItem('nome', resposta.data.nome)
             console.log(resposta)
             console.log("Deu certo, redirecionando para login"); //adicionar um alert ou modal para dizer que o cadastro foi realizado
-        navigate('/login');
+            navigate('/login');
 
         } else {
             alert('as senhas precisam ser iguais')

@@ -1,6 +1,6 @@
 // import React from 'react'
 import { useNavigate } from "react-router-dom"
-import livrosLc from "../../assets/livrosLc.jpg"
+import livrosLc from "../../assets/livrosLC.jpg"
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
