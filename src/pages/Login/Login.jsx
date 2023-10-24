@@ -30,7 +30,7 @@ const Login = () => {
                                     <input type="senha" />
                                 </div>
                                 <div className="formGroup">
-                                    <button onClick={() => { handleClick }} className="formEnviar">Entrar</button >
+                                    <button onClick={handleClick} className="formEnviar">Entrar</button >
                                 </div>
                             </form>
                         </div>

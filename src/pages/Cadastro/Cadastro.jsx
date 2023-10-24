@@ -35,7 +35,7 @@ const Cadastro = () => {
                                     <input type="senha" />
                                 </div>
                                 <div className="formGroup">
-                                    <button onClick={() => { handleClick }} className="formEnviar">Criar conta</button>
+                                    <button onClick={handleClick} className="formEnviar">Criar conta</button>
                                 </div>
                             </form>
                         </div>
