@@ -2,8 +2,8 @@
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Layout from '../../components/Layout/Layout'
-import ListaProdutos from '../../components/ListaProdutos/ListaProdutos'
 import FormContato from '../../components/FormContato/FormContato'
+import ListaProdutosNovos from '../../components/ListaProdutosNovos/ListaProdutosNovos'
 
 
 const HomePage = () => {
@@ -11,7 +11,7 @@ const HomePage = () => {
         <section>
             <Header />
             <Layout />
-            <ListaProdutos />
+            <ListaProdutosNovos/>
             <FormContato />
             <Footer />
         </section>
