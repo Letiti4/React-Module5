@@ -5,6 +5,7 @@ import livrosLc from "../../assets/livrosLc.jpg"
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 import { loginUsuario } from '../../services/api';
+import { Link } from "react-router-dom"
 
 
 const Login = () => {
@@ -50,6 +51,14 @@ const Login = () => {
                                     <input type="senha" value={senha}
                                         onChange={(e) => setSenha(e.target.value)} />
                                     {error && <p style={{ color: 'red' }}>{error}</p>}
+
+                                    <p>
+                                        Não possui login?{" "}
+                                        <Link to="/cadastro">
+                                            Cadastre-se
+                                        </Link>
+                                    </p>
+                                    
                                 </div>
                                 <div className="formGroup">
                                     <button onClick={handleLogin} className="formEnviar">Entrar</button >
@@ -62,6 +71,7 @@ const Login = () => {
             <Footer />
         </>
     )
+    
 }
 
 export default Login
