@@ -24,18 +24,49 @@
     margin: auto;
 }
 
-.containerForm {
-    padding-right: 3rem;
+.tituloCadastro{
+    margin-bottom: 60px;
 }
 
-.containerForm h2 {
-    padding-bottom: 1rem;
-    font-size: 2rem;
+.geralInput{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
 }
 
-.formEnviar {
+.caixaInput{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.caixaInput input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.caixaInput input:hover {
+    background-color: #eeeeee75;
+}
+
+.caixaInput input:focus-visible {
+    outline: 1px solid #26a5c9;
+}
+
+.btnEnviar {
     height: 45px;
     width: 200px;
     border-radius: 8px;
     font-size: 25px;
+    border: none;
+}
+
+.btnEnviar:hover {
+    background-color: #87c4ec;
+    color: #333;
 }
