@@ -3,7 +3,6 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Layout from '../../components/Layout/Layout'
 import ListaProdutos from '../../components/ListaProdutos/ListaProdutos'
-import '../HomePage/homePage.style.css'
 import FormContato from '../../components/FormContato/FormContato'
 
 
