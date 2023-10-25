@@ -4,7 +4,6 @@ import Footer from '../../components/Footer/Footer'
 import Layout from '../../components/Layout/Layout'
 import ListaProdutos from '../../components/ListaProdutos/ListaProdutos'
 import '../HomePage/homePage.style.css'
-import FormContato from '../../components/FormContato/FormContato'
 
 
 const HomePage = () => {
@@ -13,7 +12,6 @@ const HomePage = () => {
             <Header />
             <Layout />
             <ListaProdutos />
-            <FormContato />
             <Footer />
         </section>
     )
