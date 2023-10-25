@@ -3,9 +3,10 @@ import livrosLc from "../../assets/livrosLC.jpg"
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import { useState } from 'react';
-import '../Perfil/perfil.style.css'
 import { deleteUsuario } from "../../services/api";
 import { useNavigate } from "react-router-dom"
+import { toast } from "react-toastify";
+import '../Perfil/perfil.style.css'
 
 const Perfil = () => {
     const navigate = useNavigate()
@@ -38,16 +39,16 @@ const Perfil = () => {
             deleteUsuario(usuario.id, senhaDigitada)
                 .then((exclusaoBemSucedida) => {
                     if (exclusaoBemSucedida) {
-                        alert('Conta excluída com sucesso.')
+                        toast.success('Conta excluída com sucesso!')
                         navigate('/livros');
                     } else {
-                        alert('Falha ao excluir a conta.')
+                        toast.error("Falha ao excluir a conta!")
                     }
                 }).catch((erro) => {
                     console.error('Erro ao excluir a conta:', erro)
                 });
         } else {
-            alert('Senha incorreta. A conta não foi excluída.');
+            toast.warning('Senha incorreta. A conta não foi excluída!');
         }
     };
 
@@ -64,9 +65,9 @@ const Perfil = () => {
                         <div className="tituloCadastro">
 
                         </div>
-                            <h2>Seu perfil</h2>
-                            <form onSubmit={handleAtualizarInformacoes}>
-                                <div className="geralInput">
+                        <h2>Seu perfil</h2>
+                        <form onSubmit={handleAtualizarInformacoes}>
+                            <div className="geralInput">
                                 <div className="caixaInput">
                                     <label htmlFor="">Nome de usuário:</label>
                                     <input
@@ -107,12 +108,12 @@ const Perfil = () => {
                                         onChange={(e) => setUsuario({ ...usuario, endereco: e.target.value })}
                                     />
                                 </div>
-                                </div>
-                                <div className="botoes">
-                                    <button className="btnAtualizar" type="submit">Atualizar Informações</button>
-                                    <button className="btnExcluir" onClick={handleExcluirConta}>Excluir conta</button>
-                                </div>
-                            </form>
+                            </div>
+                            <div className="botoes">
+                                <button className="btnAtualizar" type="submit">Atualizar Informações</button>
+                                <button className="btnExcluir" onClick={handleExcluirConta}>Excluir conta</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -120,6 +121,5 @@ const Perfil = () => {
         </>
     )
 }
-
 
 export default Perfil
