@@ -20,7 +20,7 @@ const ListaProdutos = () => {
 
                 <div className="container-lista">
                     {livros.filter((livro) => livro.titulo.toLowerCase().includes(pesquisa.toLowerCase())).map(livro => 
-                    <CardLivro key={livro.id} titulo={livro.titulo} autor={livro.autor} preco={livro.preco} capa={livro.capa} />
+                    <CardLivro key={livro.id} titulo={livro.titulo} autor={livro.autor} preco={livro.preco} capa={livro.capa} link={'/livro-descricao/2'}/>
                     )}
                 </div>
 
