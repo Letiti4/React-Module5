@@ -2,13 +2,54 @@
 import livrosLc from "../../assets/livrosLC.jpg"
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
+import { useState } from 'react';
 import '../Perfil/perfil.style.css'
+import { deleteUsuario } from "../../services/api";
 
 const Perfil = () => {
     // const navigate = useNavigate()
     // const handleClick = () => {
     //     navigate('/livros')
     // }
+    const [usuario, setUsuario] = useState({
+        nome: 'thiago souza',
+        email: 'thiago@email.com',
+        senha: 'senha123',
+        telefone: '',
+        endereco: '',
+    });
+
+    const handleAtualizarInformacoes = (e) => {
+        e.preventDefault();
+        setUsuario({
+            nome: e.target.elements.nome.value,
+            email: e.target.elements.email.value,
+            senha: e.target.elements.senha.value,
+            telefone: e.target.elements.telefone.value,
+            endereco: e.target.elements.endereco.value,
+        });
+    };
+
+    const handleExcluirConta = () => {
+        const senhaDigitada = prompt('Digite sua senha para confirmar a exclusão da conta:');
+
+        if (senhaDigitada === usuario.senha) {
+            deleteUsuario(usuario.id, senhaDigitada)
+                .then((exclusaoBemSucedida) => {
+                    if (exclusaoBemSucedida) {
+                        alert('Conta excluída com sucesso.')
+                        navigate('/livros');
+                    } else {
+                        alert('Falha ao excluir a conta.')
+                    }
+                }).catch((erro) => {
+                    console.error('Erro ao excluir a conta:', erro)
+                });
+        } else {
+            alert('Senha incorreta. A conta não foi excluída.');
+        }
+    };
+
 
     return (
         <>
@@ -21,30 +62,50 @@ const Perfil = () => {
                     <div className="containerGeral">
                         <div className="containerForm">
                             <h2>Seu perfil</h2>
-                            <form>
+                            <form onSubmit={handleAtualizarInformacoes}>
                                 <div className="formGroup">
                                     <label htmlFor="">Nome de usuário:</label>
-                                    <input type="usuario" />
+                                    <input
+                                        type="usuario"
+                                        value={usuario.nome}
+                                        onChange={(e) => setUsuario({ ...usuario, nome: e.target.value })}
+                                    />
                                 </div>
                                 <div className="formGroup">
                                     <label htmlFor="">Email:</label>
-                                    <input type="email" />
+                                    <input
+                                        type="email"
+                                        value={usuario.email}
+                                        onChange={(e) => setUsuario({ ...usuario, email: e.target.value })}
+                                    />
                                 </div>
                                 <div className="formGroup">
                                     <label htmlFor="">Senha:</label>
-                                    <input type="senha" />
+                                    <input
+                                        type="senha"
+                                        value={usuario.senha}
+                                        onChange={(e) => setUsuario({ ...usuario, senha: e.target.value })}
+                                    />
                                 </div>
                                 <div className="formGroup">
                                     <label htmlFor="">Telefone:</label>
-                                    <input type="senha" />
+                                    <input
+                                        type="senha"
+                                        value={usuario.telefone}
+                                        onChange={(e) => setUsuario({ ...usuario, telefone: e.target.value })}
+                                    />
                                 </div>
                                 <div className="formGroup">
                                     <label htmlFor="">Endereço:</label>
-                                    <input type="senha" />
+                                    <input
+                                        type="senha"
+                                        value={usuario.endereco}
+                                        onChange={(e) => setUsuario({ ...usuario, endereco: e.target.value })}
+                                    />
                                 </div>
                                 <div className="botoes">
-                                    <button className="botaoAtualizar">Atualizar Informações</button>
-                                    <button className="formEnviar">Excluir conta</button>
+                                    <button className="botaoAtualizar" type="submit">Atualizar Informações</button>
+                                    <button className="formEnviar" onClick={handleExcluirConta}>Excluir conta</button>
                                 </div>
                             </form>
                         </div>
