@@ -5,7 +5,7 @@ const Layout = () => {
         <section className="layoutContainer">
             <div className="layoutConteudo">
                 <h1>Bem-vindo ao Espaço das Letras:</h1>
-                <p>Onde pode-se viajar sem sair do lugar!</p>
+                <p>ONDE PODE-SE VIAJAR SEM SAIR DO LUGAR!</p>
             </div>
         </section>
     )
