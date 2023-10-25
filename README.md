@@ -6,7 +6,8 @@ Bem-vindos ao Espaço das Letras, o seu novo destino literário online. Nós som
 
 Esse projeto foi desenvolvido um site utilizando React com o objetivo de consumir os dados da API. 
 
-* [React Livraria espaço das Letras](https://github.com/Letiti4/React-Module5.git)
+* [Repositório da API](https://github.com/JulieneCarneiro/BackEnd_API)
+* [Deploy da API](https://backend-api-p7ni.onrender.com/)
 
 
 ##  Requisitos 
@@ -26,6 +27,10 @@ Esse projeto foi desenvolvido um site utilizando React com o objetivo de consumi
 
 ```bash
    react-router-dom: "^6.17.0"
+```
+
+``` bash
+axios: "^1.5.1"
 ```
 
 ## Instalação 🔌
@@ -73,6 +78,8 @@ No terminal do VS Code:
 * [React Dom](https://legacy.reactjs.org/docs/react-dom.html)
  
 * [ViteJs](https://vitejs.dev/guide/)
+
+* [Axios](https://axios-http.com/docs/intro)
 ## Autores 🖊️
 
 - **Juliene Carneiro** - [GitHub](https://github.com/JulieneCarneiro) - [LinkedIn](https://www.linkedin.com/in/juliene-s-carneiro/)
