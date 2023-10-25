@@ -10,7 +10,7 @@ const ListaProdutosNovos = () => {
     return (
         <div className="container-lista-produtos">
             <div>
-                <h2> Recém-chegados: </h2>
+                <h1> Recém-chegados: </h1>
 
                 <div className="container-lista">
                     {livrosPromo.filter((livro) => livro.titulo.toLowerCase().includes(pesquisa.toLowerCase())).map(livro => 
