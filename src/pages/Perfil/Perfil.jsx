@@ -60,10 +60,13 @@ const Perfil = () => {
                 </div>
                 <div className="containerConteudo">
                     <div className="containerGeral">
-                        <div className="containerForm">
+                        <div className="tituloCadastro">
+
+                        </div>
                             <h2>Seu perfil</h2>
                             <form onSubmit={handleAtualizarInformacoes}>
-                                <div className="formGroup">
+                                <div className="geralInput">
+                                <div className="caixaInput">
                                     <label htmlFor="">Nome de usuário:</label>
                                     <input
                                         type="usuario"
@@ -71,7 +74,7 @@ const Perfil = () => {
                                         onChange={(e) => setUsuario({ ...usuario, nome: e.target.value })}
                                     />
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Email:</label>
                                     <input
                                         type="email"
@@ -79,7 +82,7 @@ const Perfil = () => {
                                         onChange={(e) => setUsuario({ ...usuario, email: e.target.value })}
                                     />
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Senha:</label>
                                     <input
                                         type="senha"
@@ -87,7 +90,7 @@ const Perfil = () => {
                                         onChange={(e) => setUsuario({ ...usuario, senha: e.target.value })}
                                     />
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Telefone:</label>
                                     <input
                                         type="senha"
@@ -95,7 +98,7 @@ const Perfil = () => {
                                         onChange={(e) => setUsuario({ ...usuario, telefone: e.target.value })}
                                     />
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Endereço:</label>
                                     <input
                                         type="senha"
@@ -103,12 +106,12 @@ const Perfil = () => {
                                         onChange={(e) => setUsuario({ ...usuario, endereco: e.target.value })}
                                     />
                                 </div>
+                                </div>
                                 <div className="botoes">
-                                    <button className="botaoAtualizar" type="submit">Atualizar Informações</button>
-                                    <button className="formEnviar" onClick={handleExcluirConta}>Excluir conta</button>
+                                    <button className="btnAtualizar" type="submit">Atualizar Informações</button>
+                                    <button className="btnExcluir" onClick={handleExcluirConta}>Excluir conta</button>
                                 </div>
                             </form>
-                        </div>
                     </div>
                 </div>
             </section>

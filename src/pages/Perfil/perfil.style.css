@@ -1,12 +1,31 @@
 .botoes {
     display: flex;
     margin-top: 40px;
+    gap: 20px;
 }
 
-.botaoAtualizar {
-    margin-right: 25px;
+.btnAtualizar {
     height: 45px;
-    width: 300px;
+    width: 160px;
     border-radius: 8px;
     font-size: 25px;
+    border: none;
+}
+
+.btnAtualizar:hover {
+    background-color: #87c4ec;
+    color: #333;
+}
+
+.btnExcluir{
+    height: 45px;
+    width: 160px;
+    border-radius: 8px;
+    font-size: 25px;
+    border: none;
+}
+
+.btnExcluir:hover {
+    background-color: #87c4ec;
+    color: #333;
 }
