@@ -1,5 +1,5 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import whatsapp from '../../assets/Logos/whatsapp.png'
 import insta from '../../assets/Logos/insta.png'
 import facebook from '../../assets/Logos/facebook.png'
@@ -9,7 +9,7 @@ import './MenuFooter.styles.css'
 const MenuFooter = () => {
 
     const handleAssineJaClick = () => {
-        alert('Você foi incluído na lista! Obrigado por se inscrever.');
+        toast.success('Você foi incluído na lista! Obrigado por se inscrever!')
     };
 
     return (
