@@ -4,6 +4,9 @@
 
 .container-lista-produtos h2{
   font-family: 'Abril Fatface', serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
 }
 
 .container-lista {
@@ -17,3 +20,27 @@
 
 .card-livro {
   flex-basis: calc(25% - 2rem);}
+
+.boxPesquisa{ 
+    margin-top: 2.1rem;;
+    margin-bottom: 1.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.boxPesquisa input {  
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 1.2rem;
+}
+
+.boxPesquisa input:hover {
+  background-color: #eeeeee75;
+}
+
+.boxPesquisa input:focus-visible {
+  outline: 1px solid #26a5c9;
+}
