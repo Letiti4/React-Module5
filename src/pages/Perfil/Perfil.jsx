@@ -5,9 +5,10 @@ import Header from '../../components/Header/Header'
 import { useState } from 'react';
 import '../Perfil/perfil.style.css'
 import { deleteUsuario } from "../../services/api";
+import { useNavigate } from "react-router-dom"
 
 const Perfil = () => {
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     // const handleClick = () => {
     //     navigate('/livros')
     // }
