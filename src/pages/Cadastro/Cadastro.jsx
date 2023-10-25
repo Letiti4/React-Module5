@@ -1,10 +1,11 @@
-import { useState } from "react";
-import './Cadastro.styles.css'
 import livrosLc from "../../assets/livrosLC.jpg"
 import Header from '../../components/Header/Header'
-import { useNavigate } from 'react-router-dom'
 import Footer from '../../components/Footer/Footer'
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 import { postUsuario } from "../../services/api";
+import { toast } from "react-toastify";
+import './Cadastro.styles.css'
 
 const Cadastro = () => {
 
@@ -26,11 +27,11 @@ const Cadastro = () => {
             localStorage.setItem('id', resposta.data.id)
             localStorage.setItem('nome', resposta.data.nome)
             console.log(resposta)
-            console.log("Deu certo, redirecionando para login"); //adicionar um alert ou modal para dizer que o cadastro foi realizado
+            toast.success("Cadastro realizado com sucesso!")
             navigate('/login');
 
         } else {
-            alert('as senhas precisam ser iguais')
+            toast.warning('As senhas precisam ser iguais!')
         }
     }
     return (
@@ -46,31 +47,31 @@ const Cadastro = () => {
                             <h2>Cadastre-se</h2>
                         </div>
                         <form>
-                            <div class="geralInput">
+                            <div className="geralInput">
                                 <div className="caixaInput">
                                     <label htmlFor="">Usuário:</label>
                                     <input type="usuario"
                                         value={nome}
-                                        onChange={(e) => setNome(e.target.value)}  placeholder="Digite seu usuário"/>
+                                        onChange={(e) => setNome(e.target.value)} placeholder="Digite seu usuário" />
                                 </div>
                                 <div className="caixaInput">
                                     <label htmlFor="">Email:</label>
                                     <input type="email"
                                         value={email}
-                                        onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu email"/>
+                                        onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu email" />
                                 </div>
                                 <div className="caixaInput">
                                     <label htmlFor="">Senha:</label>
                                     <input type="senha" value={senha}
-                                        onChange={(e) => setSenha(e.target.value)} placeholder="Digite sua senha"/>
+                                        onChange={(e) => setSenha(e.target.value)} placeholder="Digite sua senha" />
                                 </div>
                                 <div className="caixaInput">
                                     <label htmlFor="">Confirmação de Senha:</label>
                                     <input type="senha" value={confirmaSenha}
-                                        onChange={(e) => setConfirmaSenha(e.target.value)} placeholder="Digite sua senha"/>
+                                        onChange={(e) => setConfirmaSenha(e.target.value)} placeholder="Digite sua senha" />
                                 </div>
                             </div>
-                                <button width="100%" onClick={handleCadastro} className="btnEnviar">Criar conta</button>
+                            <button width="100%" onClick={handleCadastro} className="btnEnviar">Criar conta</button>
                         </form>
                     </div>
                 </div>
