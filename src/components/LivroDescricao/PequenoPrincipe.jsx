@@ -42,7 +42,7 @@ const PequenoPrincipe = () => {
           <p>{livro.descricao}</p>
           <p>Estado: {livro.estado}</p>
           <h3>{livro.preco}</h3>
-          <button className='botao-compra'>COMPRE JÁ</button>
+          <button className='botao-compra-descricao'>COMPRE JÁ</button>
         </div>
       </div>
     </section>
