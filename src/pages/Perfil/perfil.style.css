@@ -31,3 +31,8 @@
     background-color: #87c4ec;
     color: #333;
 }
+
+.alert{
+    color: green;
+    font-size: 1rem;
+}

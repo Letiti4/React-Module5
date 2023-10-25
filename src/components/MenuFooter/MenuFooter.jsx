@@ -7,6 +7,11 @@ import email from '../../assets/Logos/email.png'
 import './MenuFooter.styles.css'
 
 const MenuFooter = () => {
+
+    const handleAssineJaClick = () => {
+        alert('Você foi incluído na lista! Obrigado por se inscrever.');
+    };
+
     return (
         <div className='container-geral'>
             <div className='container-menu-footer'>
@@ -14,6 +19,7 @@ const MenuFooter = () => {
                     <h3>Institucional</h3>
                     <div>
                         <nav className='menu-institucional'>
+                            {/* INSERIR LINKS DE NAVEGAÇÃO PFV N ESQUECE */}
                             <Link>Cadastro</Link>
                             <Link>Login</Link>
                             <Link>Pedidos</Link>
@@ -27,7 +33,7 @@ const MenuFooter = () => {
                     <div>
                         <form>
                             <input placeholder='insira seu email aqui*' />
-                            <button className='assine-ja'>Assine já</button>
+                            <button className='assine-ja' onClick={handleAssineJaClick}>Assine já</button>
                         </form>
                     </div>
 

@@ -1,6 +1,6 @@
 .container-geral{
     padding: 1.5rem;
-    background-color: #B38B6D;
+    background-color: #638280;
 }
 
 .container-menu-footer{
@@ -12,7 +12,7 @@
 
 .container-menu-footer h3{
     font-family: 'Abril Fatface', serif;
-    color: #4b3422;
+    color: #1c3836;
 }
 
 .menu-institucional{
@@ -49,7 +49,7 @@
 
 .assine-ja {
     display: inline-block;
-    background-color: #B38B6D;
+    background-color: #638280;
     padding: 0.4rem;
     width: 100%;
     text-align: center;

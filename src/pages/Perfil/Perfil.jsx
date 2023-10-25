@@ -1,18 +1,14 @@
-// import { useNavigate } from 'react-router-dom'
-import livrosLc from "../../assets/livrosLC.jpg"
-import Footer from '../../components/Footer/Footer'
-import Header from '../../components/Header/Header'
-import { useState } from 'react';
+import React, { useState } from 'react';
+import livrosLc from "../../assets/livrosLC.jpg";
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 import { deleteUsuario } from "../../services/api";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import '../Perfil/perfil.style.css'
+import '../Perfil/perfil.style.css';
 
 const Perfil = () => {
-    const navigate = useNavigate()
-    // const handleClick = () => {
-    //     navigate('/livros')
-    // }
+    const navigate = useNavigate();
     const [usuario, setUsuario] = useState({
         nome: 'thiago souza',
         email: 'thiago@email.com',
@@ -21,15 +17,19 @@ const Perfil = () => {
         endereco: '',
     });
 
+    const [showAlert, setShowAlert] = useState(false);
+
     const handleAtualizarInformacoes = (e) => {
         e.preventDefault();
-        setUsuario({
+        const updatedUsuario = {
             nome: e.target.elements.nome.value,
             email: e.target.elements.email.value,
             senha: e.target.elements.senha.value,
             telefone: e.target.elements.telefone.value,
             endereco: e.target.elements.endereco.value,
-        });
+        };
+        setUsuario(updatedUsuario);
+        setShowAlert(true);
     };
 
     const handleExcluirConta = () => {
@@ -42,16 +42,15 @@ const Perfil = () => {
                         toast.success('Conta excluída com sucesso!')
                         navigate('/livros');
                     } else {
-                        toast.error("Falha ao excluir a conta!")
+                        toast.error("Falha ao excluir a conta.");
                     }
                 }).catch((erro) => {
-                    console.error('Erro ao excluir a conta:', erro)
+                    console.error('Erro ao excluir a conta:', erro);
                 });
         } else {
-            toast.warning('Senha incorreta. A conta não foi excluída!');
+            toast.warning('Senha incorreta. Sua conta não foi excluída.');
         }
     };
-
 
     return (
         <>
@@ -63,7 +62,6 @@ const Perfil = () => {
                 <div className="containerConteudo">
                     <div className="containerGeral">
                         <div className="tituloCadastro">
-
                         </div>
                         <h2>Seu perfil</h2>
                         <form onSubmit={handleAtualizarInformacoes}>
@@ -72,6 +70,7 @@ const Perfil = () => {
                                     <label htmlFor="">Nome de usuário:</label>
                                     <input
                                         type="usuario"
+                                        name="nome"
                                         value={usuario.nome}
                                         onChange={(e) => setUsuario({ ...usuario, nome: e.target.value })}
                                     />
@@ -80,6 +79,7 @@ const Perfil = () => {
                                     <label htmlFor="">Email:</label>
                                     <input
                                         type="email"
+                                        name="email"
                                         value={usuario.email}
                                         onChange={(e) => setUsuario({ ...usuario, email: e.target.value })}
                                     />
@@ -88,6 +88,7 @@ const Perfil = () => {
                                     <label htmlFor="">Senha:</label>
                                     <input
                                         type="senha"
+                                        name="senha"
                                         value={usuario.senha}
                                         onChange={(e) => setUsuario({ ...usuario, senha: e.target.value })}
                                     />
@@ -95,7 +96,8 @@ const Perfil = () => {
                                 <div className="caixaInput">
                                     <label htmlFor="">Telefone:</label>
                                     <input
-                                        type="senha"
+                                        type="telefone"
+                                        name="telefone"
                                         value={usuario.telefone}
                                         onChange={(e) => setUsuario({ ...usuario, telefone: e.target.value })}
                                     />
@@ -103,7 +105,8 @@ const Perfil = () => {
                                 <div className="caixaInput">
                                     <label htmlFor="">Endereço:</label>
                                     <input
-                                        type="senha"
+                                        type="endereco"
+                                        name="endereco"
                                         value={usuario.endereco}
                                         onChange={(e) => setUsuario({ ...usuario, endereco: e.target.value })}
                                     />
@@ -114,6 +117,7 @@ const Perfil = () => {
                                 <button className="btnExcluir" onClick={handleExcluirConta}>Excluir conta</button>
                             </div>
                         </form>
+                        {showAlert && <div className="alert">Informações atualizadas com sucesso!</div>}
                     </div>
                 </div>
             </section>
@@ -122,4 +126,4 @@ const Perfil = () => {
     )
 }
 
-export default Perfil
+export default Perfil;
