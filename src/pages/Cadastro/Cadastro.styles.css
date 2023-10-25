@@ -63,6 +63,7 @@
     border-radius: 8px;
     font-size: 25px;
     border: none;
+    transition: 0.3s ease-in;
 }
 
 .btnEnviar:hover {
