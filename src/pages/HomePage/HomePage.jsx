@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import Layout from '../../components/Layout/Layout'
 import ListaProdutosNovos from '../../components/ListaProdutosNovos/ListaProdutosNovos'
 import MenuFooter from '../../components/MenuFooter/MenuFooter'
+import BannerInfo from '../../components/BannerInfo/BannerInfo'
 
 
 const HomePage = () => {
@@ -11,6 +12,7 @@ const HomePage = () => {
         <section>
             <Header />
             <Layout />
+            <BannerInfo/>
             <ListaProdutosNovos/>
             <MenuFooter/>
             <Footer />
