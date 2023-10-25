@@ -38,19 +38,21 @@ const Login = () => {
                 </div>
                 <div className="containerConteudo">
                     <div className="containerGeral">
-                        <div className="containerForm">
+                    
                             <h2>Login</h2>
                             <form>
-                                <div className="formGroup">
+                            <div className="geralInput">
+
+                                <div className="caixaInput">
                                     <label htmlFor="">Email:</label>
                                     <input type="email" value={email}
-                                        onChange={(e) => setEmail(e.target.value)} />
+                                        onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu email" />
                                 </div>
-                                <div className="formGroup">
+                                <div className="caixaInput">
                                     <label htmlFor="">Senha:</label>
-                                    <input type="senha" value={senha}
+                                    <input type="senha" value={senha} placeholder="Digite sua senha"
                                         onChange={(e) => setSenha(e.target.value)} />
-                                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                                    {error && <p style={{ color: 'red' }}>{error}</p>} 
 
                                     <p>
                                         Não possui login?{" "}
@@ -60,11 +62,14 @@ const Login = () => {
                                     </p>
                                     
                                 </div>
-                                <div className="formGroup">
-                                    <button onClick={handleLogin} className="formEnviar">Entrar</button >
+
+                            </div>
+
+                                <div>
+                                    <button onClick={handleLogin} className="btnEnviar">Entrar</button >
                                 </div>
                             </form>
-                        </div>
+                
                     </div>
                 </div>
             </section>
