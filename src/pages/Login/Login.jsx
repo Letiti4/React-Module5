@@ -1,9 +1,8 @@
-// import React from 'react'
-import { useNavigate } from "react-router-dom"
-import React, { useState } from 'react'
 import livrosLc from "../../assets/livrosLc.jpg"
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
+import { useNavigate } from "react-router-dom"
+import { useState } from 'react'
 import { loginUsuario } from '../../services/api';
 import { Link } from "react-router-dom"
 
@@ -38,9 +37,9 @@ const Login = () => {
                 </div>
                 <div className="containerConteudo">
                     <div className="containerGeral">
-                    
-                            <h2>Login</h2>
-                            <form>
+
+                        <h2>Login</h2>
+                        <form>
                             <div className="geralInput">
 
                                 <div className="caixaInput">
@@ -52,7 +51,7 @@ const Login = () => {
                                     <label htmlFor="">Senha:</label>
                                     <input type="senha" value={senha} placeholder="Digite sua senha"
                                         onChange={(e) => setSenha(e.target.value)} />
-                                    {error && <p style={{ color: 'red' }}>{error}</p>} 
+                                    {error && <p style={{ color: 'red' }}>{error}</p>}
 
                                     <p>
                                         Não possui login?{" "}
@@ -60,23 +59,23 @@ const Login = () => {
                                             Cadastre-se
                                         </Link>
                                     </p>
-                                    
+
                                 </div>
 
                             </div>
 
-                                <div>
-                                    <button onClick={handleLogin} className="btnEnviar">Entrar</button >
-                                </div>
-                            </form>
-                
+                            <div>
+                                <button onClick={handleLogin} className="btnEnviar">Entrar</button >
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </section>
             <Footer />
         </>
     )
-    
+
 }
 
 export default Login
