@@ -44,25 +44,3 @@
 
 
 
-.infos-site{
-    display: flex;
-    justify-content: center;
-    gap: 6rem;
-    background-color: #638280;
-    padding: 1rem;
-}
-
-
-
-
-
-
-/* .menu-footer{
-    gap:1rem;
-    font-size: 1.5rem;
-    
-}
-
-.menu-footer > a{
-    text-decoration: none;
-} */
