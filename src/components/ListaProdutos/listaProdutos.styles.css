@@ -2,7 +2,7 @@
   margin: 5%;
 }
 
-.container-lista-produtos h2{
+.container-lista-produtos h2 {
   font-family: 'Abril Fatface', serif;
   display: flex;
   justify-content: center;
@@ -19,28 +19,30 @@
 }
 
 .card-livro {
-  flex-basis: calc(25% - 2rem);}
-
-.boxPesquisa{ 
-    margin-top: 2.1rem;;
-    margin-bottom: 1.1rem;
-    display: flex;
-    justify-content: center;
+  flex-basis: calc(25% - 2rem);
 }
 
-.boxPesquisa input {  
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
-    font-size: 1.2rem;
+.boxPesquisa {
+  margin-top: 2.1rem;
+  ;
+  margin-bottom: 1.1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.boxPesquisa input {
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px var(--preto-sombra);
+  font-size: 1.2rem;
 }
 
 .boxPesquisa input:hover {
-  background-color: #eeeeee75;
+  background-color: var(--cinza-sombra);
 }
 
 .boxPesquisa input:focus-visible {
-  outline: 1px solid #26a5c9;
+  outline: 1px solid var(--azul-claro);
 }

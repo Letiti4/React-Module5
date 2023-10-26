@@ -8,12 +8,18 @@
 }
 
 :root {
-    --azul: #253943;
+    --branco: #fff;
+    --azul: #69cbe9d2;
+    --azul-escuro: #253943;
+    --azul-claro: #26a5c9;
     --bege: #FFF5D6;
     --verde: #638280;
     --verde-claro: #96B7B5;
     --verde-escuro: #0f232d;
     --laranja: #B38B6D;
+    --cinza-sombra: #eeeeee75;
+    --preto-sombra: rgba(0, 0, 0, 0.2);
+    --preto: #222;
 }
 
 p {
@@ -47,4 +53,19 @@ input {
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 20px;
+}
+
+/* BARRA DE ROLAGEM */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--verde-escuro);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--verde);
+    border-radius: 20px;
+    border: 2px solid var(--preto-sombra);
 }

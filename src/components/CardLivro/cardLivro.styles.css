@@ -1,14 +1,14 @@
 .card-livro {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 0px 10px var(--preto-sombra);
     width: fit-content;
     padding: 2rem;
     border-radius: 10px;
-    border: 1px solid white; 
+    border: 1px solid var(--branco);
 }
 
 .card-livro:hover {
-    border: 1px solid #638280; 
-    box-shadow: 0px 0px 10px rgba(99, 130, 128, 0.5); 
+    border: 1px solid var(--verde);
+    box-shadow: 0px 0px 10px var(--verde-claro);
 }
 
 .imagem-livro {
@@ -29,31 +29,30 @@
 .preco {
     font-size: 1.5rem;
     font-weight: 600;
-    color: black
-        
+    color: var(--preto)
 }
 
 .botao-compra {
-        display: inline-block;
-        background-color: #96B7B5;
-        width: 100%;
-        padding: 0.4rem;
-        text-align: center;
-        color: white;
-        outline: none;
-        text-decoration: none;
-        margin-top: 2rem;
-        transition: 0.2s ease-in;
-        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-        box-sizing: border-box;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
-        border: none; 
-    }
+    display: inline-block;
+    background-color: var(--verde-claro);
+    width: 100%;
+    padding: 0.4rem;
+    text-align: center;
+    color: var(--branco);
+    outline: none;
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: 0.2s ease-in;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px var(--preto-sombra);
+    border: none;
+}
 
 .botao-compra:hover {
-    background-color: black;
+    background-color: var(--preto);
     transition: 0.2s ease-in;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
+    box-shadow: var(--preto-sombra) 0 8px 15px;
+    transform: translateY(-2px);
 }

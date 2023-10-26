@@ -1,47 +1,47 @@
-.container-geral{
+.container-geral {
     padding: 1.5rem;
-    background-color: #638280;
+    background-color: var(--verde);
 }
 
-.container-menu-footer{
-    background-color: #FFF5D6;
+.container-menu-footer {
+    background-color: var(--bege);
     display: flex;
     justify-content: space-evenly;
     padding: 1rem;
 }
 
-.container-menu-footer h3{
+.container-menu-footer h3 {
     font-family: 'Abril Fatface', serif;
-    color: #1c3836;
+    color: var(--verde-escuro);
 }
 
-.menu-institucional{
+.menu-institucional {
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
     text-decoration: none;
 }
 
-.menu-institucional a{
+.menu-institucional a {
     text-decoration: none;
-    color: black;
+    color: var(--preto);
 }
 
 .menu-institucional a:hover {
     font-weight: 700;
 }
 
-.form-assinatura input{
+.form-assinatura input {
     max-width: 21rem;
     max-height: 2rem;
     font-size: 1rem;
 }
 
-.assine-ja{
+.assine-ja {
     width: 100%;
 }
 
-.redes-sociais{
+.redes-sociais {
     align-items: center;
     display: flex;
     gap: 0.5rem
@@ -49,23 +49,23 @@
 
 .assine-ja {
     display: inline-block;
-    background-color: #638280;
+    background-color: var(--verde);
     padding: 0.4rem;
     width: 100%;
     text-align: center;
-    color: white;
+    color: var(--branco);
     outline: none;
     text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
-    border: none; 
+    box-shadow: 0px 0px 10px var(--preto-sombra);
+    border: none;
     font-size: 1rem;
 }
 
 .assine-ja:hover {
-background-color: black;
-transition: 0.2s ease-in;
-box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-transform: translateY(-2px);
+    background-color: var(--preto);
+    transition: 0.2s ease-in;
+    box-shadow: var(--preto-sombra) 0 8px 15px;
+    transform: translateY(-2px);
 }

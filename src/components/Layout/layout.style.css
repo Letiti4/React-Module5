@@ -8,27 +8,25 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    
 }
 
 .layoutConteudo {
     width: fit-content;
 }
 
-.layoutConteudo h1{
+.layoutConteudo h1 {
     font-size: 5rem;
     max-width: 45rem;
 }
 
 .layoutConteudo p {
-    font-size: 2.3rem ;
+    font-size: 2.3rem;
     font-weight: 600;
     padding: 1rem;
-
 }
 
 .layoutConteudo h1,
 .layoutConteudo p {
-    color: #ffff;
+    color: var(--branco);
     padding-left: 3rem;
 }

@@ -14,11 +14,11 @@
 }
 
 .btnAtualizar:hover {
-    background-color: #87c4ec;
+    background-color: var(--azul);
     color: #333;
 }
 
-.btnExcluir{
+.btnExcluir {
     height: 45px;
     width: 160px;
     border-radius: 8px;
@@ -28,11 +28,11 @@
 }
 
 .btnExcluir:hover {
-    background-color: #87c4ec;
+    background-color: var(--azul);
     color: #333;
 }
 
-.alert{
+.alert {
     color: green;
     font-size: 1rem;
 }

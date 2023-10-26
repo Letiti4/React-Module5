@@ -23,18 +23,18 @@
     margin: auto;
 }
 
-.tituloCadastro{
+.tituloCadastro {
     margin-bottom: 60px;
 }
 
-.geralInput{
+.geralInput {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 0;
 }
 
-.caixaInput{
+.caixaInput {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.1rem;
@@ -45,16 +45,16 @@
     padding: 0.8rem 1.2rem;
     border: none;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
+    box-shadow: 1px 1px 6px var(--preto-sombra);
     font-size: 1.2rem;
 }
 
 .caixaInput input:hover {
-    background-color: #eeeeee75;
+    background-color: var(--cinza-sombra);
 }
 
 .caixaInput input:focus-visible {
-    outline: 1px solid #26a5c9;
+    outline: 1px solid var(--azul-claro);
 }
 
 .btnEnviar {
@@ -67,6 +67,6 @@
 }
 
 .btnEnviar:hover {
-    background-color: #87c4ec;
-    color: #333;
+    background-color: var(--azul);
+    color: var(--preto);
 }
