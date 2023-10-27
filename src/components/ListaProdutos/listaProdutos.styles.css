@@ -31,12 +31,14 @@
 }
 
 .boxPesquisa input {
+  width: 1000px;
+  height: 60px;
   margin: 0.6rem 0;
   padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 10px;
   box-shadow: 1px 1px 6px var(--preto-sombra);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .boxPesquisa input:hover {
