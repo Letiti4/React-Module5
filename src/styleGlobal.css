@@ -22,6 +22,17 @@
     --preto: #222;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--laranja)
+}
+
+.link:hover {
+    transition: 0.2s;
+    color: var(--azul-escuro);
+}
+
 p {
     font-size: 20px;
     font-weight: 500;
@@ -68,4 +79,9 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--verde);
     border-radius: 20px;
     border: 2px solid var(--preto-sombra);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
