@@ -21,8 +21,12 @@
     justify-content: space-between;
 }
 
+.titulo-livro {
+    font-size: 1.5rem;
+}
+
 .nome-autor {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     padding: 0.5rem 0;
 }
 
