@@ -1,9 +1,9 @@
 .footerCaixa {
     background-color: var(--verde-escuro);
     width: 100%;
-    /* height: px; */
     bottom: 0;
-    box-shadow: 2px 2px 2px 3px var(--preto-sombra)
+    box-shadow: 2px 2px 2px 3px var(--preto-sombra);
+    position: relative;
 }
 
 .footerCaixa h2 {
@@ -24,7 +24,6 @@
 }
 
 .footerInfo {
-    /* margin-top: 35px; */
     display: flex;
     justify-content: center;
     align-items: center;
