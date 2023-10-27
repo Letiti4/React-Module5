@@ -28,9 +28,6 @@
 }
 
 .geralInput {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     padding: 1rem 0;
 }
 
@@ -63,7 +60,7 @@
     border-radius: 8px;
     font-size: 25px;
     border: none;
-    transition: 0.3s ease-in;
+    transition: 0.2s ease-in;
 }
 
 .btnEnviar:hover {
