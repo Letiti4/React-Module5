@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import livrosLc from "../../assets/livrosLC.jpg";
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
@@ -6,6 +6,9 @@ import { deleteUsuario } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import '../Perfil/perfil.style.css';
+import Modal from '../../components/Modal/Modal';
+
+
 
 const Perfil = () => {
     const navigate = useNavigate();
@@ -32,22 +35,29 @@ const Perfil = () => {
         setShowAlert(true);
     };
 
+    const [modalAberto, setModalAberto] = useState(false)
+
     const handleExcluirConta = () => {
-        const senhaDigitada = prompt('Digite sua senha para confirmar a exclusão da conta:');
+
+        setModalAberto(true)
+        // const senhaDigitada = XXXXXXXXXXX
 
         if (senhaDigitada === usuario.senha) {
             deleteUsuario(usuario.id, senhaDigitada)
                 .then((exclusaoBemSucedida) => {
                     if (exclusaoBemSucedida) {
                         toast.success('Conta excluída com sucesso!')
+                        setModalAberto(false)
                         navigate('/livros');
                     } else {
+                        setModalAberto(false)
                         toast.error("Falha ao excluir a conta.");
                     }
                 }).catch((erro) => {
                     console.error('Erro ao excluir a conta:', erro);
                 });
         } else {
+            setModalAberto(false)
             toast.warning('Senha incorreta. Sua conta não foi excluída.');
         }
     };
@@ -55,6 +65,9 @@ const Perfil = () => {
     return (
         <>
             <Header />
+
+            <Modal open={modalAberto} fechaModal={() => setModalAberto(false)} />
+
             <section className="containerCadastro">
                 <div className="imagemCadastro">
                     <img src={livrosLc} alt="" />
