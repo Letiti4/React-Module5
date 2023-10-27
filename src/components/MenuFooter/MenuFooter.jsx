@@ -40,16 +40,16 @@ const MenuFooter = () => {
                 </div>
                 <div className='redes-sociais'>
 
-                    <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+                    <a href=''>
                         <img src={insta} alt='instagram logo' />
                     </a>
-                    <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+                    <a href=''>
                         <img src={facebook} alt='facebook logo' />
                     </a>
-                    <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+                    <a href=''>
                         <img src={whatsapp} alt='whatsapp logo' />
                     </a>
-                    <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>
+                    <a href=''>
                         <img src={email} alt='email logo' />
                     </a>
 
