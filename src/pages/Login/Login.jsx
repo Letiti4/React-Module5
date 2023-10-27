@@ -37,11 +37,9 @@ const Login = () => {
                 </div>
                 <div className="containerConteudo">
                     <div className="containerGeral">
-
                         <h2>Login</h2>
                         <form>
                             <div className="geralInput">
-
                                 <div className="caixaInput">
                                     <label htmlFor="">Email:</label>
                                     <input type="email" value={email}
@@ -52,23 +50,18 @@ const Login = () => {
                                     <input type="senha" value={senha} placeholder="Digite sua senha"
                                         onChange={(e) => setSenha(e.target.value)} />
                                     {error && <p style={{ color: 'red' }}>{error}</p>}
-
                                     <p>
                                         Não possui login?{" "}
-                                        <Link to="/cadastro">
+                                        <Link className="link" to="/cadastro">
                                             Cadastre-se
                                         </Link>
                                     </p>
-
                                 </div>
-
                             </div>
-
                             <div>
                                 <button onClick={handleLogin} className="btnEnviar">Entrar</button >
                             </div>
                         </form>
-
                     </div>
                 </div>
             </section>
