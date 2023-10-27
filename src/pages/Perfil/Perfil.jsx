@@ -37,10 +37,17 @@ const Perfil = () => {
 
     const [modalAberto, setModalAberto] = useState(false)
 
+    const handleExcluir = () => {
+        setModalAberto(true)
+    }
+
     const handleExcluirConta = () => {
 
-        setModalAberto(true)
-        // const senhaDigitada = XXXXXXXXXXX
+        const senhaDigitada = Modal.input
+
+        // if (senhaDigitada === null) {
+        //     toast.info("Digite a senha ou aperte para cancelar")
+        // }
 
         if (senhaDigitada === usuario.senha) {
             deleteUsuario(usuario.id, senhaDigitada)
@@ -61,12 +68,11 @@ const Perfil = () => {
             toast.warning('Senha incorreta. Sua conta não foi excluída.');
         }
     };
-
     return (
         <>
             <Header />
 
-            <Modal open={modalAberto} fechaModal={() => setModalAberto(false)} />
+            <Modal handleExcluirConta={handleExcluirConta} open={modalAberto} fechaModal={() => setModalAberto(false)} />
 
             <section className="containerCadastro">
                 <div className="imagemCadastro">
@@ -127,7 +133,7 @@ const Perfil = () => {
                             </div>
                             <div className="botoes">
                                 <button className="btnAtualizar" type="submit">Atualizar Informações</button>
-                                <button className="btnExcluir" onClick={handleExcluirConta}>Excluir conta</button>
+                                <button className="btnExcluir" onClick={handleExcluir}>Excluir conta</button>
                             </div>
                         </form>
                         {showAlert && <div className="alert">Informações atualizadas com sucesso!</div>}
