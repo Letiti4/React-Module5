@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:3001/',
+  baseURL: 'http://localhost:3000/',
 })
 
 export const getLivros = async () => {
@@ -15,7 +15,7 @@ export const getLivros = async () => {
         'X-password': senha,
       },
     }
-    const resposta = await api.post('/usuarios', body, config)
+    const resposta = await api.post('/clientes', body, config)
     return resposta.data
   }
   
@@ -52,7 +52,7 @@ export const getLivros = async () => {
         },
       }
   
-      const resposta = await api.delete(`/usuarios/${id}`, config)
+      const resposta = await api.delete(`/clientes/${id}`, config)
   
       return resposta.data
     } catch (error) {
