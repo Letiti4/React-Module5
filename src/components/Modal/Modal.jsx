@@ -16,7 +16,7 @@ const Modal = ({ open, fechaModal, handleExcluirConta }) => {
                             <input id='confirmacao' type='password' placeholder='Digite sua senha para confirmar'></input>
                         </section>
                         <div className='botoes'>
-                            <button className='btnEnviar' onClick={handleExcluirConta}>Excluir</button>
+                        <button className='btnEnviar' onClick={() => handleExcluirConta(document.getElementById('confirmacao').value)}>Excluir</button>
                             <button className='btnEnviar' id="modal" onClick={handleClose}>Cancelar</button>
                         </div>
                     </div>
