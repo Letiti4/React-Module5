@@ -41,14 +41,7 @@ const Perfil = () => {
         setModalAberto(true)
     }
 
-    const handleExcluirConta = () => {
-
-        const senhaDigitada = Modal.input
-
-        // if (senhaDigitada === null) {
-        //     toast.info("Digite a senha ou aperte para cancelar")
-        // }
-
+    const handleExcluirConta = (senhaDigitada) => {
         if (senhaDigitada === usuario.senha) {
             deleteUsuario(usuario.id, senhaDigitada)
                 .then((exclusaoBemSucedida) => {
@@ -63,11 +56,12 @@ const Perfil = () => {
                 }).catch((erro) => {
                     console.error('Erro ao excluir a conta:', erro);
                 });
-        } else {
-            setModalAberto(false)
-            toast.warning('Senha incorreta. Sua conta não foi excluída.');
-        }
+            } else {
+                setModalAberto(false)
+                toast.warning('Senha incorreta. Sua conta não foi excluída.');
+            }
     };
+
     return (
         <>
             <Header />
