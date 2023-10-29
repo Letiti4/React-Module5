@@ -1,0 +1,72 @@
+.containerCadastro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagemCadastro {
+    width: 45%;
+    overflow: hidden;
+}
+
+.imagemCadastro img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerConteudo {
+    width: 50%;
+}
+
+.containerGeral {
+    width: 60%;
+    margin: auto;
+}
+
+.tituloCadastro {
+    margin-bottom: 70px;
+    margin-left: 35%;
+}
+
+.geralInput {
+    padding: 1rem 0;
+}
+
+.caixaInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.caixaInput input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px var(--preto-sombra);
+    font-size: 1.2rem;
+}
+
+.caixaInput input:hover {
+    background-color: var(--cinza-sombra);
+}
+
+.caixaInput input:focus-visible {
+    outline: 1px solid var(--azul-claro);
+}
+
+.btnEnviar {
+    height: 45px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 35%;
+    border-radius: 8px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s ease-in;
+}
+
+.btnEnviar:hover {
+    background-color: var(--azul);
+    color: var(--preto);
+}

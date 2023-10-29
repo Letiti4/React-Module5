@@ -1,0 +1,17 @@
+.container-lista-produtos {
+  margin: 5%;
+}
+
+.container-lista-produtos h1 {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center
+}
+
+.container-lista {
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}

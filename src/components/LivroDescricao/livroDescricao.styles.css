@@ -1,0 +1,50 @@
+.container-descricao {
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .container-imagem-livro, .container-descricao-livro{
+    width: 50%;
+} */
+
+.container-imagem-livro {
+    display: flex;
+    justify-content: center;
+
+}
+
+.capa-livro {
+    max-height: 400px;
+    margin-left: 5rem;
+}
+
+.container-descricao-livro h2 {
+    font-size: 2rem;
+    font-family: 'Abril Fatface', serif;
+}
+
+.container-descricao-livro p {
+    padding: 1rem 0;
+}
+
+.container-descricao-livro h3 {
+    font-size: 1.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.livro-descricao {
+    line-height: 1.7rem;
+}
+
+.add {
+    background-color: var(--laranja);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}

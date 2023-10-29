@@ -1,0 +1,38 @@
+.botoes {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.btnAtualizar {
+    height: 60px;
+    width: 160px;
+    border-radius: 8px;
+    font-size: 25px;
+    border: none;
+    transition: 0.3s ease-in;
+}
+
+.btnAtualizar:hover {
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
+.btnExcluir {
+    height: 60px;
+    width: 160px;
+    border-radius: 8px;
+    font-size: 25px;
+    border: none;
+    transition: 0.3s ease-in;
+}
+
+.btnExcluir:hover {
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
+.alert {
+    color: green;
+    font-size: 1rem;
+}
