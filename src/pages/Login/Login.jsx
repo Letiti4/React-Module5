@@ -1,11 +1,11 @@
 import livrosLc from "../../assets/livrosLc.jpg"
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
-import { useNavigate } from "react-router-dom"
 import { useState } from 'react'
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify";
 import axios from "axios"
+import "../Login/Login.styles.css"
 
 
 const Login = () => {
@@ -40,24 +40,21 @@ const Login = () => {
     return (
         <>
             <Header />
-            <section className="containerCadastro">
-                <div className="imagemCadastro">
+            <section className="containerLogin">
+                <div className="imagemLogin">
                     <img src={livrosLc} alt="" />
                 </div>
-                <div className="containerConteudo">
-                    <div className="containerGeral">
-                        <h2>Login</h2>
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            submit()
-                        }}>
-                            <div className="geralInput">
-                                <div className="caixaInput">
+                <div className="containerConteudoLogin">
+                    <div className="containerGeralLogin">
+                        <h1 className="tituloLogin">Login</h1>
+                        <form>
+                            <div className="geralInputLogin">
+                                <div className="caixaInputLogin">
                                     <label htmlFor="">Email:</label>
                                     <input type="text" value={email}
                                         onChange={(e) => { setEmail(e.target.value) }} placeholder="Digite seu email" />
                                 </div>
-                                <div className="caixaInput">
+                                <div className="caixaInputLogin">
                                     <label htmlFor="">Senha:</label>
                                     <input type="password"
                                         value={senha}

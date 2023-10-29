@@ -1,0 +1,76 @@
+.containerLogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagemLogin{
+    width: 45%;
+    overflow: hidden;
+}
+
+.imagemLogin img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.containerConteudoLogin {
+    width: 50%;
+}
+
+.containerGeralLogin {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+.tituloLogin {
+    margin-bottom: 30px;
+    margin-left: 25%;
+}
+
+.geralInputLogin {
+    padding: 1rem 0;
+}
+
+.caixaInputLogin {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.caixaInputLogin input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px var(--preto-sombra);
+    font-size: 1.2rem;
+}
+
+.caixaInputLogin input:hover {
+    background-color: var(--cinza-sombra);
+}
+
+.caixaInputLogin input:focus-visible {
+    outline: 1px solid var(--azul-claro);
+}
+
+.caixaInputLogin p{
+    margin-top: 25px;
+}
+
+.btnEnviarLogin {
+    height: 45px;
+    width: 200px;
+    margin-left: 20%;
+    border-radius: 8px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s ease-in;
+}
+
+.btnEnviarLogin:hover {
+    background-color: var(--azul);
+    color: var(--preto);
+}
