@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import livrosLc from "../../assets/livrosLC.jpg";
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
@@ -8,17 +8,38 @@ import { toast } from "react-toastify";
 import '../Perfil/perfil.style.css';
 import Modal from '../../components/Modal/Modal';
 
-
-
 const Perfil = () => {
     const navigate = useNavigate();
-    const [usuario, setUsuario] = useState({
-        nome: 'thiago souza',
-        email: 'thiago@email.com',
-        senha: 'senha123',
-        telefone: '',
-        endereco: '',
-    });
+     
+    const storedUserData = localStorage.getItem('userData');
+    const userData = storedUserData ? JSON.parse(storedUserData) : {
+        nome: "",
+        email: "",
+        senha: "",
+        telefone: "",
+        endereco: ""
+    };    
+
+    const storedUserId = localStorage.getItem('userId');    
+    const urlApi = `http://localhost:3000/clientes/${storedUserId}`;
+    const [cliente, setCliente] = useState(userData);
+
+    const getCliente = async() => {
+        try {
+            const resposta = await axios.get(urlApi)
+            const data = resposta.data
+            setCliente(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    useEffect(() => {
+        if (storedUserId) {
+            getCliente();
+        }
+    }, [storedUserId]);
+
 
     const [showAlert, setShowAlert] = useState(false);
 
@@ -36,14 +57,14 @@ const Perfil = () => {
     };
 
     const [modalAberto, setModalAberto] = useState(false)
-
+    
     const handleExcluir = () => {
         setModalAberto(true)
     }
 
     const handleExcluirConta = (senhaDigitada) => {
-        if (senhaDigitada === usuario.senha) {
-            deleteUsuario(usuario.id, senhaDigitada)
+        if (senhaDigitada === cliente.senha) {
+            deleteUsuario(cliente.id, senhaDigitada)
                 .then((exclusaoBemSucedida) => {
                     if (exclusaoBemSucedida) {
                         toast.success('Conta excluída com sucesso!')
@@ -84,8 +105,8 @@ const Perfil = () => {
                                     <input
                                         type="usuario"
                                         name="nome"
-                                        value={usuario.nome}
-                                        onChange={(e) => setUsuario({ ...usuario, nome: e.target.value })}
+                                        value={cliente.nome}
+                                        onChange={(e) => setCliente({ ...cliente, nome: e.target.value })}
                                     />
                                 </div>
                                 <div className="caixaInput">
@@ -93,8 +114,8 @@ const Perfil = () => {
                                     <input
                                         type="email"
                                         name="email"
-                                        value={usuario.email}
-                                        onChange={(e) => setUsuario({ ...usuario, email: e.target.value })}
+                                        value={cliente.email}
+                                        onChange={(e) => setCliente({ ...cliente, email: e.target.value })}
                                     />
                                 </div>
                                 <div className="caixaInput">
@@ -102,8 +123,8 @@ const Perfil = () => {
                                     <input
                                         type="senha"
                                         name="senha"
-                                        value={usuario.senha}
-                                        onChange={(e) => setUsuario({ ...usuario, senha: e.target.value })}
+                                        value={cliente.senha}
+                                        onChange={(e) => setCliente({ ...cliente, senha: e.target.value })}
                                     />
                                 </div>
                                 <div className="caixaInput">
@@ -111,8 +132,8 @@ const Perfil = () => {
                                     <input
                                         type="telefone"
                                         name="telefone"
-                                        value={usuario.telefone}
-                                        onChange={(e) => setUsuario({ ...usuario, telefone: e.target.value })}
+                                        value={cliente.telefone}
+                                        onChange={(e) => setCliente({ ...cliente, telefone: e.target.value })}
                                     />
                                 </div>
                                 <div className="caixaInput">
@@ -120,8 +141,8 @@ const Perfil = () => {
                                     <input
                                         type="endereco"
                                         name="endereco"
-                                        value={usuario.endereco}
-                                        onChange={(e) => setUsuario({ ...usuario, endereco: e.target.value })}
+                                        value={cliente.endereco}
+                                        onChange={(e) => setCliente({ ...cliente, endereco: e.target.value })}
                                     />
                                 </div>
                             </div>
