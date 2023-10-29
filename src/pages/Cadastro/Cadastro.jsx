@@ -1,84 +1,101 @@
 import livrosLc from "../../assets/livrosLC.jpg"
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom'
-import { postUsuario } from "../../services/api";
 import { toast } from "react-toastify";
 import './Cadastro.styles.css'
+import { useForm } from 'react-hook-form'
+import validator from 'validator';
+import axios from "axios";
 
 const Cadastro = () => {
 
-    const [nome, setNome] = useState('')
-    const [email, setEmail] = useState('')
-    const [senha, setSenha] = useState('')
-    const [confirmaSenha, setConfirmaSenha] = useState('')
-    const navigate = useNavigate()
-    const handleCadastro = async (e) => {
-        e.preventDefault()
+    const urlApi = `http://localhost:3000/clientes`;
 
-        const body = {
-            nome,
-            email
+    const { register, handleSubmit, formState: { errors }, watch } = useForm();
+
+    const onSubmit = async (data) => {
+        console.log("aki ", data);
+        try {
+            const dadosCadastro = {
+                nome: data.nome,
+                email: data.email,
+                senha: data.senha
+            };
+            console.log(dadosCadastro);
+            const response = await axios.post(urlApi, dadosCadastro);
+            console.log(response.data);
+            alert("Sucesso no Cadastro")
+            window.location.href = '/login'
+        } catch (error) {
+            console.log(error);
         }
 
-        if (senha === confirmaSenha) {
-            const resposta = await postUsuario(body, senha)
-            localStorage.setItem('id', resposta.data.id)
-            localStorage.setItem('nome', resposta.data.nome)
-            console.log(resposta)
-            toast.success("Cadastro realizado com sucesso!")
-            navigate('/login');
-
-        } else {
-            toast.warning('As senhas precisam ser iguais!')
-        }
     }
+    const watchSenha = watch("senha")
+
     return (
         <>
             <Header />
-            <section className="containerCadastro">
+            <div>
+                <div className="containerCadastro">
                 <div className="imagemCadastro">
                     <img src={livrosLc} alt="" />
                 </div>
-                <div className="containerConteudo">
-                    <div className="containerGeral">
-                        <div className="tituloCadastro">
-                            <h2>Cadastre-se</h2>
-                        </div>
-                        <form>
-                            <div className="geralInput">
-                                <div className="caixaInput">
-                                    <label htmlFor="">Usuário:</label>
-                                    <input type="usuario"
-                                        value={nome}
-                                        onChange={(e) => setNome(e.target.value)} placeholder="Digite seu usuário" />
+                    <div className="containerConteudo">
+                        <h1 className="tituloCadastro">Cadastro</h1>
+                        <div className="containerGeral">
+                            <div className="nomesSenhaInput">
+                                <div className="labelSobreInput">
+                                    <label htmlFor="nome">Nome</label>
+                                    <input
+                                        {...register("nome", { required: true })}
+                                        className={errors?.nome && "erro"}
+                                    />
+                                    {errors?.nome?.type === "required" && <span className="erro">Nome é um campo obrigatório</span>}
                                 </div>
-                                <div className="caixaInput">
-                                    <label htmlFor="">Email:</label>
-                                    <input type="email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu email" />
-                                </div>
+                            </div>
+                            <div className="caixaInput">
+                                <label htmlFor="">Email:</label>
+                                <input
+
+                                    {...register("email", { required: true, validate: (value) => validator.isEmail(value) })}
+
+                                    className={errors?.email && "erro"}
+                                />
+                                {errors?.email?.type === "required" && <span className="erro">E-mail é um campo obrigatório</span>}
+                                {errors?.email?.type === "validate" && <span className="erro">E-mail inválido</span>}
+                            </div>
+                            <div className="nomesSenhaInput">
                                 <div className="caixaInput">
                                     <label htmlFor="">Senha:</label>
-                                    <input type="senha" value={senha}
-                                        onChange={(e) => setSenha(e.target.value)} placeholder="Digite sua senha" />
+                                    <input
+
+                                        {...register("senha", { required: true })}
+                                        className={errors?.senha && "erro"}
+                                    />
+                                    {errors?.senha?.type === "required" && <span className="erro">Senha é um campo obrigatório</span>}
                                 </div>
                                 <div className="caixaInput">
                                     <label htmlFor="">Confirmação de Senha:</label>
-                                    <input type="senha" value={confirmaSenha}
-                                        onChange={(e) => setConfirmaSenha(e.target.value)} placeholder="Digite sua senha" />
+                                    <input
+
+                                        {...register("confirmarSenha", { required: true, validate: (value) => value === watchSenha })}
+                                        className={errors?.confirmarSenha && "erro"}
+                                    />
+                                    {errors?.confirmarSenha?.type === "required" && <span className="erro">Confirmar Senha é um campo obrigatório</span>}
+                                    {errors?.confirmarSenha?.type === "validate" && <span className="erro">Senhas não coincidem</span>}
                                 </div>
                             </div>
-                            <button width="100%" onClick={handleCadastro} className="btnEnviar">Criar conta</button>
-                        </form>
+                        </div>
+                        <div>
+                            <button className='btnEnviar' onClick={handleSubmit(onSubmit)}>Cadastrar</button>
+
+                        </div>
                     </div>
                 </div>
-            </section>
-            <Footer />
+            </div>
         </>
-    )
-}
+    );
+};
 
-export default Cadastro
+export default Cadastro;
