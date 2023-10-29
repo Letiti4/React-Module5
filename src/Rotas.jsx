@@ -8,13 +8,12 @@ import Perfil from "./pages/Perfil/Perfil";
 import DetalhesPequenoPrincipe from "./pages/DetalhesLivro/DetalhesPequenoPrincipe";
 import DetalhesDomQuixote from "./pages/DetalhesLivro/DomQuixote";
 
-
 const Rotas = () => {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/cadastro" element={<Cadastro/>} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/perfil" element={<Perfil />} />
                 <Route path="/livros" element={<Livros />} />
