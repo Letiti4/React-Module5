@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { useState } from 'react'
 import { loginUsuario } from '../../services/api';
 import { Link } from "react-router-dom"
-
+import "../Login/Login.styles.css"
 
 const Login = () => {
 
@@ -31,21 +31,21 @@ const Login = () => {
     return (
         <>
             <Header />
-            <section className="containerCadastro">
-                <div className="imagemCadastro">
+            <section className="containerLogin">
+                <div className="imagemLogin">
                     <img src={livrosLc} alt="" />
                 </div>
-                <div className="containerConteudo">
-                    <div className="containerGeral">
-                        <h2>Login</h2>
+                <div className="containerConteudoLogin">
+                    <div className="containerGeralLogin">
+                        <h2 className="tituloLogin">Login</h2>
                         <form>
-                            <div className="geralInput">
-                                <div className="caixaInput">
+                            <div className="geralInputLogin">
+                                <div className="caixaInputLogin">
                                     <label htmlFor="">Email:</label>
                                     <input type="email" value={email}
                                         onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu email" />
                                 </div>
-                                <div className="caixaInput">
+                                <div className="caixaInputLogin">
                                     <label htmlFor="">Senha:</label>
                                     <input type="senha" value={senha} placeholder="Digite sua senha"
                                         onChange={(e) => setSenha(e.target.value)} />
@@ -59,7 +59,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <div>
-                                <button onClick={handleLogin} className="btnEnviar">Entrar</button >
+                                <button onClick={handleLogin} className="btnEnviarLogin">Entrar</button >
                             </div>
                         </form>
                     </div>
