@@ -27,6 +27,7 @@ const Cadastro = () => {
             };
             console.log(dadosCadastro);
             const response = await axios.post(urlApi, dadosCadastro);
+            localStorage.setItem('userData', JSON.stringify(dadosCadastro));
             console.log(response.data);
             alert("Sucesso no Cadastro");
             window.location.href = "/login";
