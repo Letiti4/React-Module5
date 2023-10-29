@@ -15,9 +15,9 @@ const Modal = ({ open, fechaModal, handleExcluirConta }) => {
                             <p>Deseja realmente apagar a sua conta?</p>
                             <input id='confirmacao' type='password' placeholder='Digite sua senha para confirmar'></input>
                         </section>
-                        <div className='botoes'>
-                        <button className='btnEnviar' onClick={() => handleExcluirConta(document.getElementById('confirmacao').value)}>Excluir</button>
-                            <button className='btnEnviar' id="modal" onClick={handleClose}>Cancelar</button>
+                        <div className='botoesModal'>
+                        <button className='btnExcluirModal' onClick={() => handleExcluirConta(document.getElementById('confirmacao').value)}>Excluir</button>
+                            <button className='btnCancelar' id="modal" onClick={handleClose}>Cancelar</button>
                         </div>
                     </div>
                 </div>
