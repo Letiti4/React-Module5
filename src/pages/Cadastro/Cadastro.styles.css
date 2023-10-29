@@ -19,12 +19,13 @@
 }
 
 .containerGeral {
-    width: 90%;
+    width: 60%;
     margin: auto;
 }
 
 .tituloCadastro {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
+    margin-left: 35%;
 }
 
 .geralInput {
@@ -57,6 +58,8 @@
 .btnEnviar {
     height: 45px;
     width: 200px;
+    margin-top: 20px;
+    margin-left: 35%;
     border-radius: 8px;
     font-size: 25px;
     border: none;
