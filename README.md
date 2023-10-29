@@ -4,7 +4,7 @@ Bem-vindos ao Espaço das Letras, o seu novo destino literário online. Nós som
 
 ## Descrição 🧾
 
-Esse projeto foi desenvolvido um site utilizando React com o objetivo de consumir os dados da API. 
+Nesse projeto foi desenvolvido um site utilizando React com o objetivo de consumir os dados da API. 
 
 * [Repositório da API](https://github.com/JulieneCarneiro/BackEnd_API)
 * [Deploy da API](https://backend-api-p7ni.onrender.com/)

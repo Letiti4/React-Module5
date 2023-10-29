@@ -1,10 +1,13 @@
 .card-livro {
     box-shadow: 0px 0px 10px var(--preto-sombra);
-    width: 17rem;
+    width: 26rem;
     height: 35rem;
     padding: 2rem;
     border-radius: 10px;
     border: 1px solid var(--branco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-livro:hover {
