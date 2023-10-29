@@ -33,3 +33,37 @@
     flex-direction: column;
     align-items: center;
 }
+
+.botoesModal{
+        display: flex;
+        margin-top: 10px;
+        gap: 20px;
+}
+.btnExcluirModal {
+    height: 45px;
+    width: 130px;
+    border-radius: 8px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s ease-in;
+}
+
+.btnExcluirModal:hover {
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
+.btnCancelar {
+    height: 45px;
+    width: 130px;
+    border-radius: 8px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s ease-in;
+}
+
+.btnCancelar:hover {
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
