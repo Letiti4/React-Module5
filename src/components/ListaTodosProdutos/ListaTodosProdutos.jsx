@@ -1,6 +1,6 @@
 import React from 'react'
 import CardLivro from '../CardLivro/CardLivro'
-import Style from './listaTodosProdutos.styles.css'
+import "./listaTodosProdutos.styles.css"
 
 const ListaTodosProdutos = () => {
   return (
