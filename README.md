@@ -8,6 +8,7 @@ Nesse projeto foi desenvolvido um site utilizando React com o objetivo de consum
 
 * [Repositório da API](https://github.com/JulieneCarneiro/BackEnd_API)
 * [Deploy da API](https://backend-api-p7ni.onrender.com/)
+* [Deploy do Front](https://react-module5.vercel.app/)
 
 
 ##  Requisitos 
